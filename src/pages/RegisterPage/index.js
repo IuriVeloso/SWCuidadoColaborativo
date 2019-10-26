@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import './styles.js';
-import logo from '../../assets/logo.png';
 import { Forms, Input } from './styles';
-import {ButtonSubmit, Image} from '../../components/Components/styles'
+import {ButtonSubmit} from '../../components/Components/styles'
 
 
 export default class Register extends Component{
@@ -80,7 +79,6 @@ handleSubmit = e =>{
 
         return(
                 <Forms onSubmit={this.handleSubmit} >
-                    <Image src={logo} alt="logo" className='image'/>
                     <ul>
                         <li><Input
                         placeholder="Nome Completo"

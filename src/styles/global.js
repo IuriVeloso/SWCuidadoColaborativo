@@ -1,4 +1,5 @@
 import { createGlobalStyle} from 'styled-components';
+import background from '../assets/Original.jpg';
 
 export default createGlobalStyle`
     *{
@@ -13,8 +14,8 @@ export default createGlobalStyle`
     }
 
     body{
-        background: #CAF982;
         -webkit-font-smoothing: antialiased !important;
+        background: url(${background});
     }
 
     input , a, form {

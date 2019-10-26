@@ -13,11 +13,11 @@ export const Button= styled.button`
     padding: 5px 18px ;
     border-radius: 10px;
     border-style: solid;
-    max-width: 160px;
-    border-color: #A316D5;
-    background-color: #A316D5;
-    border-width: 4px;
-    font-size: 13px;
+    background-image: linear-gradient(to bottom, gray, white);
+    min-width:240px;
+    min-height: 35px;
+    border-width: 0px;
+    font-size: 16px;
     color: #FFF;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
@@ -30,15 +30,15 @@ export const ButtonSubmit= styled.button.attrs(props => {
         disabled: props.load,
     });
 })`
-    min-width:90px;
+    min-width:160px;
+    margin: 20px 0;
+    min-height: 35px;
     padding: 5px 18px ;
     border-radius: 10px;
-    background-color: #A316D5;
-    border-style: solid;
-    border-color: #A316D5;
-    border-width: 4px;
+    background-image: linear-gradient(to bottom, #2D3CFF, #110065);
+    border-width: 0px;
     max-width: 180px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: bold;
     color: #FFF;
     font-family: Arial, Helvetica, sans-serif;
