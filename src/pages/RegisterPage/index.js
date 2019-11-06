@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './styles.js';
-import { Forms, Input } from './styles';
+import { Forms, Input, Organization } from './styles';
 import {ButtonSubmit} from '../../components/Components/styles'
 
 
@@ -16,6 +16,7 @@ export default class Register extends Component{
         function:"",
         loading: false,
         error:[],
+        match: true,
     };
 
 handleChangeName= e =>{
@@ -70,40 +71,81 @@ handleSubmit = e =>{
         service:"",
         profession: "",
         function:"",
-        loading: false});
+        loading: false,
+    });
 
 }
 
     render(){
-        const {fullName, email, pass, confirmPass, phone, service, profession, $function, loading}= this.state;
+        const {fullName, email, pass, confirmPass, phone, service, profession, $function, loading, match}= this.state;
 
         return(
                 <Forms onSubmit={this.handleSubmit} >
+                    <h1>Cuidado Colaborativo</h1>
                     <ul>
-                        <li><Input
-                        placeholder="Nome Completo"
+                        <li>
+                        <Organization>
+                            <h2> Nome Completo </h2>
+                        </Organization>
+                        <Input
+                        match={match}
                         value= {fullName}
                         onChange={this.handleChangeName}
                         /></li>
-                        <li><Input placeholder= "Email"
+                        <li>
+                        <Organization>
+                            <h2> Email </h2>
+                        </Organization>
+                        <Input
+                        match={match}
                         value= {email}
                         onChange={this.handleChangeEmail}/></li>
-                        <li><Input placeholder= "Senha"
+                        <li>
+                        <Organization>
+                            <h2> Senha </h2>
+                        </Organization>
+                        <Input
+                        match={match}
                         value= {pass}
                         onChange={this.handleChangePass}/></li>
-                        <li><Input placeholder= "Confirmação de Senha"
+                        <li>
+                        <Organization>
+                            <h2> Confirmação de Senha </h2>
+                        </Organization>
+                        <Input
+                        match={match}
                         value= {confirmPass}
                         onChange={this.handleChangePass2}/></li>
-                        <li><Input placeholder= "Telefone"
+                        <li>
+                        <Organization>
+                            <h2> Telefone </h2>
+                        </Organization>
+                        <Input
+                        match={match}
                         value= {phone}
                         onChange={this.handleChangePhone}/></li>
-                        <li><Input placeholder= "Serviço"
+                        <li>
+                        <Organization>
+                            <h2> Serviço </h2>
+                        </Organization>
+                        <Input
+                        match={match}
                         value= {service}
                         onChange={this.handleChangeService}/></li>
-                        <li><Input placeholder= "Profissão"
+                        <li>
+                        <Organization>
+                            <h2> Profissão </h2>
+                        </Organization>
+                        <Input
+                        match={match}
                         value= {profession}
                         onChange={this.handleChangeProfession}/></li>
-                        <li><Input placeholder= "Função"
+                        <li>
+                        <Organization>
+                            <h2> Função </h2>
+                        </Organization>
+                        <Input
+                        match={match}
                         value= {$function}
                         onChange={this.handleChange}/></li>
                     </ul>

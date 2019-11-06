@@ -7,17 +7,17 @@ export const Form = styled.form`
     flex-direction: column;
 
     h3{
-        color: #EEE;
+        color: #49508E;
         padding: 30px 0 3px 0;
+        font-family: "Bodoni MT";
     }
 
     h1{
         padding: 40px 0 80px 0;
         max-width: 160px;
         font-size: 30px;
-        font-weight: lighter;
         text-align: center;
-        font-family: -apple-system, cursive;
+        font-family: "Poor Richard";
     }
 `
 
@@ -47,6 +47,7 @@ export const Organization= styled.div`
         display:flex;
         font-size: 20px;
         color: #444;
+        font-family: "Bodoni MT";
     }
 
     a{
@@ -55,5 +56,6 @@ export const Organization= styled.div`
         color: #444;
         font-size: 15px;
         font-weight: bold;
+        font-family: "Bodoni MT";
     }
 `;
