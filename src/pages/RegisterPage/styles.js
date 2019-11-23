@@ -7,12 +7,12 @@ export const Forms = styled.form`
     align-items: center;
     flex-direction: column;
 
-    h1{
-        padding: 40px 0 80px 0;
+    > h1{
+        padding: 40px 0 40px 0;
         max-width: 160px;
         font-size: 30px;
         text-align: center;
-        font-family: "Poor Richard";
+        font-family: "Poor Richard" sans-serif;
     }
 
     ul{
@@ -24,26 +24,12 @@ export const Forms = styled.form`
     }
 `
 
-export const Organization= styled.div`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: baseline;
-    width: 300px;
-
-    h2{
-        display:flex;
-        font-size: 20px;
-        color: #444;
-        font-family: "Bodoni MT";
-    }
-`
-
 export const Input = styled.input`
     display: flex;
     margin: auto;
     justify-content: center;
     margin: 0px 0 5px 0;
+    padding: 5px;
     height: 25px;
     width: 300px;
     font-size: 16px;

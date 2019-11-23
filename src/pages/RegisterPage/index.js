@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './styles.js';
-import { Forms, Input, Organization } from './styles';
-import {ButtonSubmit} from '../../components/Components/styles'
+import { Forms, Input } from './styles';
+import {ButtonSubmit, Organization} from '../../components/styles'
 
 
 export default class Register extends Component{

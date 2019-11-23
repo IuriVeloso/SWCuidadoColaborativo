@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom';
 import {FiLoader} from 'react-icons/fi';
 
 import api from '../../services/api';
-import {Organization, Input, Form } from './styles.js';
-import {Button, ButtonSubmit} from '../../components/Components/styles';
+import {Input, Form } from './styles.js';
+import {Button, ButtonSubmit, Organization} from '../../components/styles';
 
 
 export default class Login extends Component{
@@ -70,9 +70,9 @@ handleSubmit = async e => {
                 value={password}
                 onChange={this.handlePassChange}
                 />
-                <ButtonSubmit load={loading}>
+                <Link to="/home"> <ButtonSubmit load={loading}>
                     {loading ? <FiLoader color="#FFF" size= "13"/> : "Login"}
-                </ButtonSubmit>
+                </ButtonSubmit> </Link>
                 <h3> Não possui cadastro? </h3>
                 <Link to="/cadastro" >  <Button> Solicitar cadastro  </Button></Link>
             </Form>

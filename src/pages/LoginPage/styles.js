@@ -9,7 +9,7 @@ export const Form = styled.form`
     h3{
         color: #49508E;
         padding: 30px 0 3px 0;
-        font-family: "Bodoni MT";
+        font-family: "Bodoni MT Std" sans-serif;
     }
 
     h1{
@@ -17,7 +17,7 @@ export const Form = styled.form`
         max-width: 160px;
         font-size: 30px;
         text-align: center;
-        font-family: "Poor Richard";
+        font-family: "Poor Richard" sans-serif;
     }
 `
 
@@ -35,27 +35,4 @@ export const Input = styled.input`
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
-`;
-
-export const Organization= styled.div`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: baseline;
-    width: 300px;;
-    h2{
-        display:flex;
-        font-size: 20px;
-        color: #444;
-        font-family: "Bodoni MT";
-    }
-
-    a{
-        text-decoration: none;
-        display: flex;
-        color: #444;
-        font-size: 15px;
-        font-weight: bold;
-        font-family: "Bodoni MT";
-    }
 `;

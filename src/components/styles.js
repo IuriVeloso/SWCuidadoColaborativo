@@ -19,7 +19,7 @@ export const Button= styled.button`
     border-width: 0px;
     font-size: 20px;
     color: #FFF;
-    font-family: "Bodoni MT";
+    font-family: "Bodoni MT Std";
     margin: 5px;
 `;
 
@@ -39,7 +39,7 @@ export const ButtonSubmit= styled.button.attrs(props => {
     max-width: 240px;
     font-size: 20px;
     color: #FFF;
-    font-family: "Bodoni MT";
+    font-family: "Bodoni MT Std";
 
     &[disabled]{
         cursor: not-allowed;
@@ -57,4 +57,25 @@ export const ButtonSubmit= styled.button.attrs(props => {
 export const Image = styled.img`
     margin-top: 40px;
     width: 158px;
+`;
+
+export const Organization = styled.div`
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+align-items: baseline;
+width: 300px;;
+> h2{
+    font-size: 20px;
+    color: #444;
+    font-family: "Bodoni MT Std" sans-serif;
+}
+
+> a{
+    display: flex;
+    color: #444;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Bodoni MT Std" sans-serif;
+}
 `;
