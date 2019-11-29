@@ -27,7 +27,7 @@ handleSubmit = async e => {
     e.preventDefault();
     this.setState({loading: true})
 
-    const teste= await api.get('./repos/facebook/react');
+    const teste= await api.get('');
 
     const email = this.state.email;
 
@@ -70,11 +70,11 @@ handleSubmit = async e => {
                 value={password}
                 onChange={this.handlePassChange}
                 />
-                <Link to="/home"> <ButtonSubmit load={loading}>
-                    {loading ? <FiLoader color="#FFF" size= "13"/> : "Login"}
-                </ButtonSubmit> </Link>
+                <ButtonSubmit load={loading}>
+                    <Link to="/home">{loading ? <FiLoader color="#FFF" size= "13"/> : "Login"} </Link>
+                </ButtonSubmit>
                 <h3> Não possui cadastro? </h3>
-                <Link to="/cadastro" >  <Button> Solicitar cadastro  </Button></Link>
+                <Button type="button"> <Link to="/cadastro" >  Solicitar cadastro </Link> </Button>
             </Form>
         </>
         );

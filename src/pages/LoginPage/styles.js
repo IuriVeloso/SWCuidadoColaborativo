@@ -17,7 +17,7 @@ export const Form = styled.form`
         max-width: 160px;
         font-size: 30px;
         text-align: center;
-        font-family: "Poor Richard" sans-serif;
+        font-family: "Poor Richard";
     }
 `
 
@@ -25,6 +25,7 @@ export const Input = styled.input`
     display: flex;
     margin: auto;
     justify-content: center;
+    padding: 5px;
     margin: 0px 0 5px 0;
     height: 25px;
     width: 300px;

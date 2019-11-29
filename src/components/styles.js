@@ -13,7 +13,7 @@ export const Button= styled.button`
     padding: 5px 18px ;
     border-radius: 10px;
     border-style: solid;
-    background-image: linear-gradient(to bottom,#555DA5, #A5DEF9);
+    background-image: linear-gradient(to bottom,#555DA5,#555DA5, #A5DEF9);
     min-width:240px;
     min-height: 35px;
     border-width: 0px;
@@ -21,6 +21,10 @@ export const Button= styled.button`
     color: #FFF;
     font-family: "Bodoni MT Std";
     margin: 5px;
+
+    a{
+        color: white;
+    }
 `;
 
 export const ButtonSubmit= styled.button.attrs(props => {
@@ -34,11 +38,11 @@ export const ButtonSubmit= styled.button.attrs(props => {
     min-height: 35px;
     padding: 5px 45px ;
     border-radius: 10px;
-    background-image: linear-gradient(to bottom,#555DA5, #A5DEF9);
+    background-image: linear-gradient(to bottom,#555DA5, #555DA5, #A5DEF9);
     border-width: 0px;
     max-width: 240px;
     font-size: 20px;
-    color: #FFF;
+    color: #FFF !important;
     font-family: "Bodoni MT Std";
 
     &[disabled]{
@@ -52,6 +56,9 @@ export const ButtonSubmit= styled.button.attrs(props => {
             color: darkblue;
             }
         `}
+    a{
+        color: white;
+    }
 `;
 
 export const Image = styled.img`
