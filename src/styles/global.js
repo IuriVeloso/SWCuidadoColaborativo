@@ -21,7 +21,7 @@ export default createGlobalStyle`
         background: url(${background});
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
     }
 
     input , a, form {
