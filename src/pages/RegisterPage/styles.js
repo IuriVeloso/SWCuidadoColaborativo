@@ -12,7 +12,7 @@ export const Forms = styled.form`
         max-width: 160px;
         font-size: 30px;
         text-align: center;
-        font-family: "Poor Richard" sans-serif;
+        font-family: "Poor Richard";
     }
 
     ul{

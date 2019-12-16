@@ -56,9 +56,7 @@ handleSubmit = e =>{
     e.preventDefault();
     this.setState({loading: true});
     if (this.state.pass !== this.state.confirmPass)
-        this.setState({error: [...this.state.error, "Senhas Diferentes"]})
-    else
-
+        this.setState({error: [...this.state.error, 'Senhas Diferentes']})
 
     console.log(this.state)
 
