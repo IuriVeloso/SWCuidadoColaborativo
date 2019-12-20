@@ -1,13 +1,18 @@
 import React, {Component} from 'react';
-import Menu from '../../components/Menu/index';
-import {Recentes, Org1, OrgSlider,Slider, ButtonUser, ButtonEvents} from './styles';
-import {IoIosArrowForward, IoIosArrowBack} from "react-icons/io";
 import {Link} from 'react-router-dom';
+
+import MenuSlider from '../../components/Carousel_Events/index.js';
+import Menu from '../../components/Menu/index';
+import MenuAdmin from '../../components/Menu_admin/index'
+import {Recentes, Org1, OrgSlider, ButtonUser, ButtonEvents} from './styles';
+
+
 export default class Homepage extends Component{
     state= {
 
     }
     render(){
+        const admin = true;
         return(
             <>
             <Org1>
@@ -30,17 +35,10 @@ export default class Homepage extends Component{
                 <ButtonUser> <Link to="/">Usuários </Link></ButtonUser>
                 <h1> Próximos Eventos</h1>
                 <OrgSlider>
-                    <IoIosArrowBack styles="font-size: 100px"/>
-                        <Slider>
-                            <h2> Evento A</h2>
-                            <small> Local: </small>
-                            <small> Endereço:</small>
-                            <small> Descrição: </small>
-                        </Slider>
-                    <IoIosArrowForward/>
+                    <MenuSlider/>
                 </OrgSlider>
                 <ButtonEvents type="button"> <Link to="/">Eventos </Link> </ButtonEvents>
-                <Menu/>
+                {admin ? <MenuAdmin/>:<Menu/>}
             </Org1>
             </>
         )
