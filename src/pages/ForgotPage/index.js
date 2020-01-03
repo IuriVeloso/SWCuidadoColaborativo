@@ -13,7 +13,7 @@ export default class Register extends Component{
         loading: false,
         error:[],
        
-    };
+    }; 
 
 
   

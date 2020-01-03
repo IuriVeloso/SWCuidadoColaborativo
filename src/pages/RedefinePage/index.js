@@ -21,7 +21,7 @@ handleChangePass= e =>
 handleChangePass2= e =>
     this.setState({confirmPass: e.target.value})
 
-
+ 
 
     handleSubmit = e =>{
         e.preventDefault();
