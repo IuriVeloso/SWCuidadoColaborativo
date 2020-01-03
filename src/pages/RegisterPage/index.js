@@ -109,7 +109,7 @@ class Inputed extends Component{
             />
         </>
         )
-    }
+    } 
 }
 
 class MissInputed extends Component{
