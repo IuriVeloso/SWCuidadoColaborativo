@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import './styles.js';
-import { Forms, Input } from './styles';
-import {ButtonSubmit, Organization} from '../../components/styles'
+import { Forms, MissInput, Select } from './styles';
+import {ButtonSubmit, Organization, Input} from '../../components/styles'
 
 
 export default class Register extends Component{
@@ -16,142 +15,134 @@ export default class Register extends Component{
         function:"",
         loading: false,
         error:[],
-        match: true,
+        match_pass: true,
+        match_email: true,
     };
 
-handleChangeName= e =>{
+handleChangeName= e =>
     this.setState({fullName: e.target.value});
-};
 
-handleChangeEmail= e =>{
+handleChangeEmail= e =>
     this.setState({email: e.target.value})
-};
 
-handleChangePass= e =>{
+handleChangePass= e =>
     this.setState({pass: e.target.value});
-};
 
-handleChangePass2= e =>{
+handleChangePass2= e =>
     this.setState({confirmPass: e.target.value})
 
-};
-
-handleChangePhone= e =>{
+handleChangePhone= e =>
     this.setState({phone: e.target.value});
-};
 
-handleChangeService= e =>{
+handleChangeService= e =>
     this.setState({service: e.target.value})
-};
 
-handleChangeProfession= e =>{
+handleChangeProfession= e =>
     this.setState({profession: e.target.value});
-};
 
-handleChangeFunction= e =>{
+handleChangeFunction= e =>
     this.setState({function : e.target.value})
-};
 
 handleSubmit = e =>{
     e.preventDefault();
     this.setState({loading: true});
     if (this.state.pass !== this.state.confirmPass)
-        this.setState({error: [...this.state.error, "Senhas Diferentes"]})
+        this.setState({error: [...this.state.error, 'Senhas Diferentes'], match_pass: false})
     else
 
+    //criar verificador de email
+
+    this.setState({error: [], match: true})
 
     console.log(this.state)
 
     this.setState({
-        fullName: "",
-        email:"",
         pass:"",
         confirmPass:"",
-        phone:"",
-        service:"",
-        profession: "",
-        function:"",
         loading: false,
     });
-
 }
 
     render(){
-        const {fullName, email, pass, confirmPass, phone, service, profession, $function, loading, match}= this.state;
-
+        const {fullName, email, pass, confirmPass, phone, service, profession, $function, loading, match_pass, match_email} = this.state;
+        const list_service= ["CRAS", "Clínica da Família", "Escola A", "Escola B", "CApsi", "ONG A", "ONG B"];
+        const list_function= ["Fazer Triagem", "Visita aos usuários", "Psicólogo"]
         return(
                 <Forms onSubmit={this.handleSubmit} >
                     <h1>Cuidado Colaborativo</h1>
                     <ul>
                         <li>
-                        <Organization>
-                            <h2> Nome Completo </h2>
-                        </Organization>
-                        <Input
-                        match={match}
-                        value= {fullName}
-                        onChange={this.handleChangeName}
-                        /></li>
+                            <Inputed value={fullName} onChange= {this.handleChangeName} nome_campo= 'Nome Completo'/></li>
                         <li>
-                        <Organization>
-                            <h2> Email </h2>
-                        </Organization>
-                        <Input
-                        match={match}
-                        value= {email}
-                        onChange={this.handleChangeEmail}/></li>
+                            <MissInputed value={email} onChange= {this.handleChangeEmail} nome_campo= 'Email' match={match_email}  /></li>
                         <li>
-                        <Organization>
-                            <h2> Senha </h2>
-                        </Organization>
-                        <Input
-                        match={match}
-                        value= {pass}
-                        onChange={this.handleChangePass}/></li>
+                            <MissInputed value={pass} onChange= {this.handleChangePass} nome_campo= 'Senha' match={match_pass} /></li>
                         <li>
-                        <Organization>
-                            <h2> Confirmação de Senha </h2>
-                        </Organization>
-                        <Input
-                        match={match}
-                        value= {confirmPass}
-                        onChange={this.handleChangePass2}/></li>
+                            <MissInputed value={confirmPass} onChange= {this.handleChangePass2} nome_campo= 'Confirmação da Senha' match={match_pass} /></li>
                         <li>
-                        <Organization>
-                            <h2> Telefone </h2>
-                        </Organization>
-                        <Input
-                        match={match}
-                        value= {phone}
-                        onChange={this.handleChangePhone}/></li>
+                             <Inputed value={phone} onChange= {this.handleChangePhone} nome_campo= 'Telefone'/></li>
                         <li>
-                        <Organization>
-                            <h2> Serviço </h2>
-                        </Organization>
-                        <Input
-                        match={match}
-                        value= {service}
-                        onChange={this.handleChangeService}/></li>
+                            <DropdownInput value={service} onChange= {this.handleChangeService} nome_campo= 'Serviço' list={list_service}/></li>
                         <li>
-                        <Organization>
-                            <h2> Profissão </h2>
-                        </Organization>
-                        <Input
-                        match={match}
-                        value= {profession}
-                        onChange={this.handleChangeProfession}/></li>
+                            <Inputed value={profession} onChange= {this.handleChangeProfession} nome_campo= 'Formação'/></li>
                         <li>
-                        <Organization>
-                            <h2> Função </h2>
-                        </Organization>
-                        <Input
-                        match={match}
-                        value= {$function}
-                        onChange={this.handleChange}/></li>
+                            <DropdownInput value={$function} onChange= {this.handleChangeService} nome_campo= 'Função' list={list_function}/></li>
                     </ul>
                     <ButtonSubmit load={loading}> Solicitar Cadastro </ButtonSubmit>
                 </Forms>
 
+        )
+    }
+}
+
+class Inputed extends Component{
+    render(){
+        const {value, onChange, nome_campo} = this.props;
+        return(
+        <>
+            <Organization>
+                <h2> {nome_campo} </h2>
+            </Organization>
+            <Input
+            value= {value}
+            onChange={onChange}
+            />
+        </>
+        )
+    }
+}
+
+class MissInputed extends Component{
+    render(){
+        const {value, onChange, nome_campo, match} = this.props;
+        return(
+            <>
+            <Organization>
+                <h2> {nome_campo} </h2>
+            </Organization>
+            <MissInput
+                match={match}
+                value= {value}
+                onChange={onChange}/>
+            </>
+        )
+    }
+}
+
+class DropdownInput extends Component{
+    render(){
+        const {value, onChange, nome_campo, list} = this.props;
+        return(
+            <>
+                 <Organization>
+                    <h2> {nome_campo} </h2>
+                </Organization>
+                <Select value= {value} onChange={onChange}>
+                    {list.map(item=>
+                    <option key= {item}> {item} </option>
+                    )}
+                </Select>
+            </>
         )
     }
 }

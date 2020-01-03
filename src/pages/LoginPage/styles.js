@@ -9,7 +9,7 @@ export const Form = styled.form`
     h3{
         color: #49508E;
         padding: 30px 0 3px 0;
-        font-family: "Bodoni MT Std" sans-serif;
+        font-family: "Baskerville" ;
     }
 
     h1{

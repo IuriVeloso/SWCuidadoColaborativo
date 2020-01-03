@@ -1,5 +1,6 @@
 import styled, {keyframes, css} from 'styled-components';
 
+
 const rotate = keyframes`
     from{
         transform: rotate(0deg);
@@ -75,7 +76,7 @@ width: 300px;;
 > h2{
     font-size: 20px;
     color: #444;
-    font-family: "Bodoni MT Std" sans-serif;
+    font-family: "Baskerville";
 }
 
 > a{
@@ -83,6 +84,6 @@ width: 300px;;
     color: #444;
     font-size: 15px;
     font-weight: bold;
-    font-family: "Bodoni MT Std" sans-serif;
+    font-family: "Baskerville";
 }
 `;
