@@ -3,6 +3,8 @@ import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import Login from './pages/LoginPage';
 import Register from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
+import ForgotPage from './pages/ForgotPage';
+import RedefinePage from './pages/RedefinePage';
 
 export default function Routes(){
     return(
@@ -11,6 +13,10 @@ export default function Routes(){
                 <Route path= "/" exact component={Login}/>
                 <Route path= "/cadastro" component={Register}/>
                 <Route path= "/home" component={HomePage}/>
+                <Route path= "/users" component={Login}/>
+                <Route path= "/events" component={Login}/>
+                <Route path= "/recuperacao-senha" component={ForgotPage}/>
+                <Route path= "/redefinir-senha" component={RedefinePage}/>
             </Switch>
         </BrowserRouter>
     );

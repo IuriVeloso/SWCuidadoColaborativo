@@ -1,5 +1,6 @@
 import styled, {keyframes, css} from 'styled-components';
 
+
 const rotate = keyframes`
     from{
         transform: rotate(0deg);
@@ -21,7 +22,6 @@ export const Button= styled.button`
     color: #FFF;
     font-family: "Bodoni MT Std";
     margin: 5px;
-
     a{
         color: white;
     }
@@ -44,12 +44,10 @@ export const ButtonSubmit= styled.button.attrs(props => {
     font-size: 20px;
     color: #FFF !important;
     font-family: "Bodoni MT Std";
-
     &[disabled]{
         cursor: not-allowed;
         opacity: 0.5;
     }
-
     ${props=> props.load && css`
         svg{
             animation: ${rotate} 3s linear infinite;
@@ -75,14 +73,13 @@ width: 300px;;
 > h2{
     font-size: 20px;
     color: #444;
-    font-family: "Bodoni MT Std" sans-serif;
+    font-family: "Baskerville";
 }
-
 > a{
     display: flex;
     color: #444;
     font-size: 15px;
     font-weight: bold;
-    font-family: "Bodoni MT Std" sans-serif;
+    font-family: "Baskerville";
 }
 `;
