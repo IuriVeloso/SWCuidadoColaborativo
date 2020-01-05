@@ -32,7 +32,7 @@ export const Input = styled.input`
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
-    border-color: ${props=> (props.match ? '#AAA' : '#C13')};
+    border-color: ${props=> (props.match ? '#DDD' : '#C13')};
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;

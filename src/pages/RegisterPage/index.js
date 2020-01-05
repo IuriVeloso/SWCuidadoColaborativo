@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {ButtonSubmit, Organization} from '../../components/styles'
-import {Input, Forms, MissInput, Select } from './styles';
+import {Input, MissInput, Forms, Select } from './styles';
 
 
 export default class Register extends Component{
@@ -48,11 +48,8 @@ handleSubmit = e =>{
     this.setState({loading: true});
     if (this.state.pass !== this.state.confirmPass)
         this.setState({error: [...this.state.error, 'Senhas Diferentes'], match_pass: false})
-    else
-
-    //criar verificador de email
-
-    this.setState({error: [], match: true})
+    else 
+        this.setState({error: [], match_pass: true})
 
     console.log(this.state)
 
@@ -106,6 +103,7 @@ class Inputed extends Component{
             <Input
             value= {value}
             onChange={onChange}
+            
             />
         </>
         )
@@ -137,11 +135,13 @@ class DropdownInput extends Component{
                  <Organization>
                     <h2> {nome_campo} </h2>
                 </Organization>
-                <Select value= {value} onChange={onChange}>
+               <div>
+                   <Select value= {value} onChange={onChange}>
                     {list.map(item=>
                     <option key= {item}> {item} </option>
                     )}
                 </Select>
+                </div> 
             </>
         )
     }

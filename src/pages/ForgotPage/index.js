@@ -15,8 +15,9 @@ export default class Register extends Component{
        
     }; 
 
-
-  
+alerta = () =>{
+    alert("E-mail enviado!")
+};
 
 handleChangeEmail= e =>{
     this.setState({email: e.target.value})
@@ -45,7 +46,8 @@ handleSubmit = e =>{
         const {email, loading, match}= this.state;
 
         return(
-           
+                <>
+               
                 <Forms onSubmit={this.handleSubmit}>
                     <h1>Cuidado Colaborativo</h1>
                     <ul>
@@ -73,12 +75,12 @@ handleSubmit = e =>{
 
             
                  
-                  <ButtonSubmit onClick={alert("E-mail enviado!")} load={loading}> Enviar Email </ButtonSubmit>
+                  <ButtonSubmit onClick={this.alerta} load={loading}> Enviar Email </ButtonSubmit>
              
 
                 </Forms>
 
-
+            </>
         )
     }
 }

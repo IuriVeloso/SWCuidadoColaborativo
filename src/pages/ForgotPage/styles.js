@@ -10,7 +10,7 @@ export const Forms = styled.form`
         max-width: 160px;
         font-size: 30px;
         text-align: center;
-        font-family: 'Baskervville', serif;
+        font-family: "Poor Richard";
     }
     ul{
         list-style: none;
@@ -32,7 +32,7 @@ export const Input = styled.input`
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
-    border-color: '#AAA';
+    border-color: '#DDD';
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;

@@ -10,7 +10,7 @@ export const Forms = styled.form`
         max-width: 160px;
         font-size: 30px;
         text-align: center;
-        font-family: 'Baskervville', serif;
+        font-family: "Poor Richard";
     }
     ul{
         list-style: none;
@@ -31,7 +31,7 @@ height: 28px;
 width: 300px;
 font-size: 16px;
 border-width: 1px;
-border-color: ${props=> (props.match ? '#AAA' : '#C13')};
+border-color: ${props=> (props.match ? '#DDD' : '#C13')};
 border-radius: 6px;
 border: white;
 background-color: #FFF;
@@ -46,7 +46,7 @@ export const Select = styled.select`
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
-    border-color: '#AAA';
+    border-color: '#DDD';
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
@@ -63,7 +63,7 @@ width: 300px;
 font-size: 16px;
 border-width: 1px;
 border-style: outset;
-border-color: ${props=> (props.match ? '#AAA' : '#C13')};
+border-color: ${props=> (props.match ? '#DDD' : '#C13')};
 border-radius: 6px;
 box-shadow: 1px 1px 1px grey;
 background-color: #FFF;

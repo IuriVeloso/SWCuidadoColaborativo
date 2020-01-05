@@ -29,9 +29,7 @@ handleChangePass2= e =>
         if (this.state.pass !== this.state.confirmPass)
             this.setState({error: [...this.state.error, 'Senhas Diferentes'], match: false})
         else
-    
-    
-        this.setState({error: [], match: true})
+            this.setState({error: [], match: true})
     
         console.log(this.state)
     

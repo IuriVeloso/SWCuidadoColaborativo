@@ -21,7 +21,11 @@ export const Forms = styled.form`
     }
 `
 
-export const Input = styled.input`
+export const Input = styled.input.attrs(props=> {
+    return ({
+        required: 'required'
+    });
+})`
     display: flex;
     margin: auto;
     justify-content: center;
@@ -32,13 +36,17 @@ export const Input = styled.input`
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
-    border-color: '#AAA';
+    border-color: #DDD;
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
 `;
 
-export const Select = styled.select`
+export const Select = styled.select.attrs(props=> {
+    return({
+        required: 'required'
+    });
+})`
     display: flex;
     margin: auto;
     justify-content: center;
@@ -48,13 +56,17 @@ export const Select = styled.select`
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
-    border-color: '#AAA';
+    border-color: #DDD;
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
 `;
 
-export const MissInput = styled.input`
+export const MissInput = styled.input.attrs(props=> {
+    return({
+        required: 'required'
+    });
+})`
 display: flex;
 margin: auto;
 justify-content: center;
@@ -65,7 +77,7 @@ width: 300px;
 font-size: 16px;
 border-width: 1px;
 border-style: outset;
-border-color: ${props=> (props.match ? '#AAA' : '#C13')};
+border-color: ${props=> (props.match ? '#DDD' : '#C13')};
 border-radius: 6px;
 box-shadow: 1px 1px 1px grey;
 background-color: #FFF;
