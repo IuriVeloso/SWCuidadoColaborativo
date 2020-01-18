@@ -9,6 +9,6 @@ export const Organization = styled.div`
     position: absolute;
     bottom: 0;
     color: #555DA5;
-    font-size: 45px;
+    font-size: 40px;
     padding: 5px 0;
 `
