@@ -43,5 +43,5 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0"
   },
-  "homepage": "file:///C:/IuriVeloso/Fluxo/SW_Ocupacional/ferramenta_virtual/build/"
+  "homepage": "./"
 }
