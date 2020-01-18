@@ -37,7 +37,7 @@ export const ButtonUser = styled.button`
     justify-content: center;
     font-family: "Baskerville";
     border: 0;
-    margin: auto;
+    margin: 2% auto;
     font-weight: bold;
     padding: 2px 40px;
     border-radius: 5px;
@@ -65,6 +65,7 @@ export const OrgSlider = styled.div`
     align-items: center;
     font-size: 40px;
     color: #000;
+    margin-top: 2%;
 `
 
 export const ButtonEvents = styled.button`
@@ -74,7 +75,7 @@ export const ButtonEvents = styled.button`
     align-content: center;
     justify-content: center;
     border: 0;
-    margin: auto;
+    margin: 2% auto;
     font-weight: bold;
     padding: 2px 40px;
     border-radius: 5px;
