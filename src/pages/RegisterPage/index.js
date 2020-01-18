@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as EmailValidator from 'email-validator';
 
 import { Forms, MissInput, Select } from './styles';
-import {ButtonSubmit, Organization, Input} from '../../components/styles'
+import {ButtonSubmit, Organization, Input} from '../../components/styles.js'
 
 export default class Register extends Component{
     state={

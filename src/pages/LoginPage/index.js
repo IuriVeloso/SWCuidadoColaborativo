@@ -26,7 +26,7 @@ handleSubmit = async e => {
     e.preventDefault();
     this.setState({loading: true})
 
-    const teste= await api.get('http://jsonplaceholder.typicode.com/todos');
+    const teste= await api.get('');
 
     const email = this.state.email;
 
