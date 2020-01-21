@@ -10,7 +10,8 @@ export default createGlobalStyle`
     }
     @import url(http://db.onlinewebfonts.com/c/ad7c34620a5c83f74ecc52bf562be6a1?family=Bodoni+MT+Std);
     @import url(http://db.onlinewebfonts.com/c/1333b13c4f911f3160f1c2822573f70c?family=Poor+Richard);
-    @import url(//db.onlinewebfonts.com/c/f929174bda22c1821db22ab9760b082a?family=Baskerville);
+    @import url(http://db.onlinewebfonts.com/c/f929174bda22c1821db22ab9760b082a?family=Baskerville);
+
     html, body, #app{
         min-height: 100%;
     }

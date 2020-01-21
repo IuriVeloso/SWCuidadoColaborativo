@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {ButtonSubmit, Organization} from '../../components/styles'
 import {Input, MissInput, Forms, Select } from './styles';
-
+import PropTypes from 'prop-types';
+import * as EmailValidator from 'email-validator';
 
 export default class Register extends Component{
     state={
@@ -48,14 +49,15 @@ handleSubmit = e =>{
     this.setState({loading: true});
     if (this.state.pass !== this.state.confirmPass)
         this.setState({error: [...this.state.error, 'Senhas Diferentes'], match_pass: false})
-    else 
-        this.setState({error: [], match_pass: true})
-
+    else
+        this.setState({match_pass:true})
+    if (!EmailValidator.validate(this.state.email))
+        this.setState({error: [...this.state.error, 'Email inválido'], match_email: false})
+    else
+        this.setState({match_email:true})
     console.log(this.state)
 
     this.setState({
-        pass:"",
-        confirmPass:"",
         loading: false,
     });
 }
@@ -73,9 +75,9 @@ handleSubmit = e =>{
                         <li>
                             <MissInputed value={email} onChange= {this.handleChangeEmail} nome_campo= 'Email' match={match_email}  /></li>
                         <li>
-                            <MissInputed value={pass} onChange= {this.handleChangePass} nome_campo= 'Senha' match={match_pass} /></li>
+                            <MissInputed value={pass} onChange= {this.handleChangePass} nome_campo= 'Senha' match={match_pass} type="password" /></li>
                         <li>
-                            <MissInputed value={confirmPass} onChange= {this.handleChangePass2} nome_campo= 'Confirmação da Senha' match={match_pass} /></li>
+                            <MissInputed value={confirmPass} onChange= {this.handleChangePass2} nome_campo= 'Confirmação da Senha' match={match_pass} type="password"/></li>
                         <li>
                              <Inputed value={phone} onChange= {this.handleChangePhone} nome_campo= 'Telefone'/></li>
                         <li>
@@ -85,6 +87,8 @@ handleSubmit = e =>{
                         <li>
                             <DropdownInput value={$function} onChange= {this.handleChangeService} nome_campo= 'Função' list={list_function}/></li>
                     </ul>
+                    {!match_email ? <h2> Email inválido</h2> : null}
+                    {!match_pass ? <h2> Senhas incorretas</h2> : null}
                     <ButtonSubmit load={loading}> Solicitar Cadastro </ButtonSubmit>
                 </Forms>
 
@@ -103,12 +107,17 @@ class Inputed extends Component{
             <Input
             value= {value}
             onChange={onChange}
-            
             />
         </>
         )
-    } 
+    }
 }
+
+Inputed.propTypes={
+    nome_campo: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    value: PropTypes.string.isRequired
+};
 
 class MissInputed extends Component{
     render(){
@@ -127,6 +136,13 @@ class MissInputed extends Component{
     }
 }
 
+MissInputed.propTypes={
+    value : PropTypes.string.isRequired,
+    onChange : PropTypes.func.isRequired,
+    nome_campo : PropTypes.string.isRequired,
+    match : PropTypes.bool.isRequired
+};
+
 class DropdownInput extends Component{
     render(){
         const {value, onChange, nome_campo, list} = this.props;
@@ -136,7 +152,7 @@ class DropdownInput extends Component{
                     <h2> {nome_campo} </h2>
                 </Organization>
                <div>
-                   <Select value= {value} onChange={onChange}>
+                <Select value= {value} onChange={onChange}>
                     {list.map(item=>
                     <option key= {item}> {item} </option>
                     )}
@@ -145,4 +161,10 @@ class DropdownInput extends Component{
             </>
         )
     }
+
+DropdownInput.propTypes = {
+    value : PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    nome_campo: PropTypes.string.isRequired,
+    list: PropTypes.object.isRequired
 }
