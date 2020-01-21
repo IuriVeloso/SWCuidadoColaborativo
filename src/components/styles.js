@@ -15,7 +15,7 @@ export const Button= styled.button`
     border-radius: 10px;
     border-style: solid;
     background-image: linear-gradient(to bottom,#555DA5,#555DA5, #A5DEF9);
-    min-width:240px;
+    min-width:250px;
     min-height: 35px;
     border-width: 0px;
     font-size: 20px;
@@ -40,7 +40,7 @@ export const ButtonSubmit= styled.button.attrs(props => {
     border-radius: 10px;
     background-image: linear-gradient(to bottom,#555DA5, #555DA5, #A5DEF9);
     border-width: 0px;
-    max-width: 240px;
+    max-width: 250px;
     font-size: 20px;
     color: #FFF !important;
     font-family: "Bodoni MT Std";
