@@ -1,5 +1,6 @@
 import { createGlobalStyle} from 'styled-components';
 import background from '../assets/1125x2436.png';
+import {Link} from 'react-router-dom';
 
 export default createGlobalStyle`
     *{
@@ -23,9 +24,13 @@ export default createGlobalStyle`
     }
     input , a, form {
         text-decoration: none !important;
+        color: none;
     }
     button{
         cursor: pointer;
         text-decoration: none;
+    }
+    .(Link){
+        color: none; 
     }
 `;

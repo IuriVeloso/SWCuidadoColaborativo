@@ -70,11 +70,11 @@ handleSubmit = async e => {
                 value={password}
                 onChange={this.handlePassChange}
                 />
-                <ButtonSubmit load={loading}>
-                    <Link to="/home">{loading ? <FiLoader color="#FFF" size= "13"/> : "Login"} </Link>
-                </ButtonSubmit>
+                 <Link to="/home"> <ButtonSubmit load={loading}>
+                  {loading ? <FiLoader color="#FFF" size= "13"/> : "Login"}
+                </ButtonSubmit> </Link>
                 <h3> Não possui cadastro? </h3>
-                <Button type="button"> <Link to="/cadastro" >  Solicitar cadastro </Link> </Button>
+            <Link to="/cadastro" > <Button type="button">  Solicitar cadastro  </Button></Link>
             </Form>
         </>
         );
