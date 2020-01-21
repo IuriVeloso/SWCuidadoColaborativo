@@ -58,6 +58,7 @@ class Inputed extends Component{
             <Input
             value= {value}
             onChange={onChange}
+            type="search"
            
             
             />

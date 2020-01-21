@@ -17,11 +17,11 @@ export default class Homepage extends Component{
             <>
             <Org1>
                 <h1> Usuários Recentes</h1>
-                <Recentes>
+                <Link to="/paciente"><Recentes>
                     <h1> Marcus Vinicius</h1>
                     <h1> Dona Marta</h1>
                     <small> Última atualização: 11 horas atrás </small>
-                </Recentes>
+                </Recentes></Link>
                 <Recentes>
                     <h1> João Marcelo</h1>
                     <h1> Dona Marta</h1>

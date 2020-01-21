@@ -7,6 +7,7 @@ import ForgotPage from './pages/ForgotPage';
 import RedefinePage from './pages/RedefinePage';
 import AddUserPage from './pages/AddUserPage';
 import SearchUserPage from './pages/SearchUserPage'
+import UserPage from './pages/UserPage'
 
 export default function Routes(){
     return(
@@ -21,6 +22,7 @@ export default function Routes(){
                 <Route path= "/redefinir-senha" component={RedefinePage}/>
                 <Route path= "/adicionar-paciente" component={AddUserPage}/>
                 <Route path= "/procurar-paciente" component={SearchUserPage}/>
+                <Route path= "/paciente" component={UserPage}/>
             </Switch>
         </BrowserRouter>
     );
