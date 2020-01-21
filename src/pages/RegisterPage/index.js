@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
+import {ButtonSubmit, Organization} from '../../components/styles'
+import {Input, MissInput, Forms, Select } from './styles';
 import PropTypes from 'prop-types';
 import * as EmailValidator from 'email-validator';
-
-import { Forms, MissInput, Select } from './styles';
-import {ButtonSubmit, Organization, Input} from '../../components/styles.js'
 
 export default class Register extends Component{
     state={
@@ -152,15 +151,16 @@ class DropdownInput extends Component{
                  <Organization>
                     <h2> {nome_campo} </h2>
                 </Organization>
+               <div>
                 <Select value= {value} onChange={onChange}>
                     {list.map(item=>
                     <option key= {item}> {item} </option>
                     )}
                 </Select>
+                </div> 
             </>
         )
     }
-}
 
 DropdownInput.propTypes = {
     value : PropTypes.string.isRequired,
