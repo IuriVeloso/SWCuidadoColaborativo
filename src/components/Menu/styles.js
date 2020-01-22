@@ -9,7 +9,7 @@ export const Organization = styled.div`
     bottom: 0;
     position: fixed;
     color: #555DA5;
-    font-size: 45px;
+    font-size: 40px;
     padding: 5px 0;
     > h2{
         font-size: 20px;

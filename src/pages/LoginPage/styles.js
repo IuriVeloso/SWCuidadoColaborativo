@@ -12,6 +12,13 @@ export const Form = styled.form`
         font-family: "Baskerville" ;
     }
 
+    >h2{
+        color: #000;
+        padding: 0 3px 0;
+        font-size: 20px;
+        font-family: "Baskerville" ;
+    }
+
     h1{
         padding: 40px 0 80px 0;
         max-width: 160px;

@@ -12,6 +12,13 @@ export const Forms = styled.form`
         text-align: center;
         font-family: "Poor Richard";
     }
+    
+    >h2{
+        color: #000;
+        padding: 0 3px 0;
+        font-size: 20px;
+        font-family: "Baskerville" ;
+    }
     ul{
         list-style: none;
     li{
@@ -42,11 +49,7 @@ export const Input = styled.input.attrs(props=> {
     background-color: #FFF;
 `;
 
-export const Select = styled.select.attrs(props=> {
-    return({
-        required: 'required'
-    });
-})`
+export const Select = styled.select`
     display: flex;
     margin: auto;
     justify-content: center;
@@ -56,17 +59,13 @@ export const Select = styled.select.attrs(props=> {
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
-    border-color: #DDD;
+    border-color: '#AAA';
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
 `;
 
-export const MissInput = styled.input.attrs(props=> {
-    return({
-        required: 'required'
-    });
-})`
+export const MissInput = styled.input`
 display: flex;
 margin: auto;
 justify-content: center;
@@ -82,5 +81,3 @@ border-radius: 6px;
 box-shadow: 1px 1px 1px grey;
 background-color: #FFF;
 `;
-
-
