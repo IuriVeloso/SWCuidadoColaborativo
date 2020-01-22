@@ -18,8 +18,8 @@ export const Forms = styled.form`
     ul{
         list-style: none;
     li{
-        margin-top: 3px;
-        margin-bottom: 3px;
+        margin-top: 1px;
+        margin-bottom: 1px;
     }
     }
 `
@@ -34,8 +34,8 @@ export const Input = styled.input.attrs(props=> {
     justify-content: center;
     margin: 0px 0 5px 0;
     padding: 5px;
-    height: 25px;
-    width: 300px;
+    height: 45px;
+    width: 450px;
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
@@ -87,8 +87,8 @@ width: 450px;
 `;
 
 export const Text = styled.text`
-font-size: 30px;
-color: #444;
+font-size: 28px;
+color: #000;
 font-family: "Baskerville";
 margin-bottom:2px;
 margin-top:20px;
@@ -117,7 +117,8 @@ margin-left:370px;
 export const Box = styled.div`
 width:500px;
 height:400px;
-margin-top:20px;
+margin-top:10px;
 border: 2px solid grey;
 border-radius:8px;
+background-color: rgb(256,256,256,0.5);
 `

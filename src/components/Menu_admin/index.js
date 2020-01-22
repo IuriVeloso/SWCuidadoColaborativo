@@ -7,7 +7,7 @@ import { Organization } from '../Menu/styles';
 export default function MenuAdmin(){
     return(
         <Organization>
-            <FaAddressCard/> < Link to="/adicionar-paciente">  <FaUserPlus/> </Link>  <FaSearch/> <FaBell/> <FaBars/>
+            <FaAddressCard/> < Link to="/adicionar-paciente">  <FaUserPlus/> </Link>  <Link to="/procurar-paciente"><FaSearch/> </Link> <FaBell/> <FaBars/>
         </Organization>
     );
 }

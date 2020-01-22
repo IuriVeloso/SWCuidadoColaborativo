@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import { Forms, Text, Posi, Organization, Input, Box } from './styles.js';
 import {Button, ButtonSubmit,  } from '../../components/styles';
+import Menu from '../../components/Menu/index';
+import MenuAdmin from '../../components/Menu_admin/index'
 
 
 export default class Register extends Component{
@@ -25,6 +27,7 @@ handleChangeAny= e =>
 
     render(){
         const {pacient, any, nis, loading} = this.state;
+        const admin=true;
         return(
                 <Forms onSubmit={this.handleSubmit} > 
                     
@@ -54,11 +57,8 @@ handleChangeAny= e =>
 
                     </Box>
                    
-                    
-                   
-
                    </Organization>
-                  
+                     {admin ? <MenuAdmin/>:<Menu/>}
                 </Forms>
              
 
