@@ -58,6 +58,9 @@ export const Org1 = styled.div`
         font-size: 25px;
         font-family: "Baskerville";
     }
+    >a{
+        color: #000;
+    }
 `
 export const OrgSlider = styled.div`
     display: flex;
@@ -82,3 +85,4 @@ export const ButtonEvents = styled.button`
     background-color: rgb(255,255,255, 0.5);
     > a {color: #000 !important} ;
     `
+   

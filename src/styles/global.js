@@ -24,6 +24,7 @@ export default createGlobalStyle`
     }
     input , a, form {
         text-decoration: none !important;
+        color: none;
     }
     button{
         cursor: pointer;

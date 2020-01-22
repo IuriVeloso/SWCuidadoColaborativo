@@ -6,6 +6,7 @@ export const Forms = styled.form`
     align-items: center;
     flex-direction: column;
     padding-bottom:100px;
+    margin-top:20px;
    
     > h1{
         padding: 40px 0 40px 0;
@@ -17,8 +18,8 @@ export const Forms = styled.form`
     ul{
         list-style: none;
     li{
-        margin-top: 3px;
-        margin-bottom: 3px;
+        margin-top: 1px;
+        margin-bottom: 1px;
     }
     }
 `
@@ -33,8 +34,8 @@ export const Input = styled.input.attrs(props=> {
     justify-content: center;
     margin: 0px 0 5px 0;
     padding: 5px;
-    height: 25px;
-    width: 300px;
+    height: 45px;
+    width: 450px;
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
@@ -42,10 +43,6 @@ export const Input = styled.input.attrs(props=> {
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
-    background-image: url('https://www.w3schools.com/howto/searchicon.png');
-    background-position: 3px 1px; 
-    background-repeat: no-repeat;
-    padding: 4px 2px 5px 30px;
 `;
 
 export const Select = styled.select.attrs(props=> {
@@ -67,19 +64,18 @@ export const Select = styled.select.attrs(props=> {
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
 `;
-
 export const Organization = styled.div`
 display: flex;
-align-items:flex-end;
 justify-content: space-between;
 flex-wrap: wrap;
 align-items: baseline;
+width: 450px;
+
 
 > h2{
     font-size: 20px;
     color: #444;
     font-family: "Baskerville";
-    margin-bottom:2px;
 }
 > a{
     display: flex;
@@ -88,17 +84,41 @@ align-items: baseline;
     font-weight: bold;
     font-family: "Baskerville";
 }
->h1{
-    display: flex;
-    align-items: flex-end;
-    justify-content : space-evenly;
-    padding: 40px 0 130px 0;
-    max-width: 160px;
-    font-size: 30px;
-    text-align: center;
-    font-family: "Poor Richard";
-    margin-bottom:-100px;
+`;
 
+export const Text = styled.text`
+font-size: 28px;
+color: #000;
+font-family: "Baskerville";
+margin-bottom:2px;
+margin-top:20px;
+`
+export const Posi = styled.div`
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+align-items: baseline;
+width: 300px;
+margin-left:370px;
+> h2{
+    font-size: 20px;
+    color: #444;
+    font-family: "Baskerville";
+}
+> a{
+    display: flex;
+    color: #444;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: "Baskerville";
 }
 `
 
+export const Box = styled.div`
+width:500px;
+height:400px;
+margin-top:10px;
+border: 2px solid grey;
+border-radius:8px;
+background-color: rgb(256,256,256,0.5);
+`

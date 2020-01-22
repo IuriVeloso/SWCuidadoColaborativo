@@ -16,11 +16,11 @@ export default class Homepage extends Component{
             <>
             <Org1>
                 <h1> Usuários Recentes</h1>
-                <Recentes>
+                <Link to="/paciente"><Recentes>
                     <h1> Marcus Vinicius</h1>
                     <h1> Dona Marta</h1>
                     <small> Última atualização: 11 horas atrás </small>
-                </Recentes>
+                </Recentes></Link>
                 <Recentes>
                     <h1> João Marcelo</h1>
                     <h1> Dona Marta</h1>
@@ -31,12 +31,12 @@ export default class Homepage extends Component{
                     <h1> Pavão</h1>
                     <small> Última atualização: 2 dias atrás </small>
                 </Recentes>
-                <ButtonUser> <Link to="/">Usuários </Link></ButtonUser>
+               <Link to="/procurar-paciente"> <ButtonUser>Usuários </ButtonUser></Link>
                 <h1> Próximos Eventos</h1>
                 <OrgSlider>
                     <MenuSlider/>
                 </OrgSlider>
-                <ButtonEvents type="button"> <Link to="/">Eventos </Link> </ButtonEvents>
+                <Link to="/"><ButtonEvents type="button">Eventos </ButtonEvents> </Link>
              {admin ? <MenuAdmin/>:<Menu/>}
             </Org1>
             </>

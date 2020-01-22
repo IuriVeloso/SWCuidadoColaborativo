@@ -11,4 +11,12 @@ export const Organization = styled.div`
     color: #555DA5;
     font-size: 40px;
     padding: 5px 0;
+    > h2{
+        font-size: 20px;
+        color: #444;
+        font-family: "Baskerville";
+    }
+    > a{
+        color: #555DA5;
+    }
 `
