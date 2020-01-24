@@ -12,7 +12,7 @@ export const Forms = styled.form`
         text-align: center;
         font-family: "Poor Richard";
     }
-    
+
     >h2{
         color: #000;
         padding: 0 3px 0;

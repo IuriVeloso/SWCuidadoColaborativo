@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {ButtonSubmit, Organization} from '../../components/styles'
-import {Input, MissInput, Forms, Select } from './styles';
 import PropTypes from 'prop-types';
 import * as EmailValidator from 'email-validator';
+
+import { Forms, MissInput, Select, Input } from './styles';
+import {ButtonSubmit, Organization} from '../../components/styles.js'
 
 export default class Register extends Component{
     state={
@@ -13,7 +14,7 @@ export default class Register extends Component{
         phone:"",
         service:"",
         profession: "",
-        function:"",
+        $function:"",
         loading: false,
         error:[],
         match_pass: true,
