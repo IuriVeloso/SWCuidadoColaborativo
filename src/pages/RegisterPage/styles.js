@@ -14,7 +14,7 @@ export const Forms = styled.form`
         text-align: center;
         font-family: "Poor Richard";
     }
-    
+
     >h2{
         color: #000;
         padding: 0 3px 0;
@@ -41,7 +41,7 @@ export const Input = styled.input`
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
-    border-color: '#AAA';
+    border-color: ${'#AAA'};
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
