@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import { Forms, Text, Posi, Organization, Input, Box } from './styles.js';
-import {Button, ButtonSubmit,  } from '../../components/styles';
 import Menu from '../../components/Menu/index';
 import MenuAdmin from '../../components/Menu_admin/index'
 
@@ -13,7 +12,7 @@ export default class Register extends Component{
         any:"",
         loading: false,
         error:[],
-      
+
     };
 
 handleChangePacient= e =>
@@ -26,41 +25,38 @@ handleChangeAny= e =>
     this.setState({any: e.target.value});
 
     render(){
-        const {pacient, any, nis, loading} = this.state;
+        const {pacient, any, nis} = this.state;
         const admin=true;
         return(
-                <Forms onSubmit={this.handleSubmit} > 
-                    
+                <Forms onSubmit={this.handleSubmit} >
+
                 <Organization>
                 <ul>  <li>
                             <Text>Paciente </Text>
                        </li>
                         <li>
-                            <Text>Nome: {this.pacient}</Text>
+                            <Text>Nome: {pacient}</Text>
                        </li>
                         <li>
-                             <Text>Nis: {this.nis} </Text>
-                        </li>     
-                      
+                             <Text>Nis: {nis} </Text>
+                        </li>
+
                     </ul>
                     <Posi>
                           <Link to=""> Mais informações </Link>
                     </Posi>
- 
+
                    <Box>
                    <ul>
                         <li>
-                            <Inputed value={any} onChange= {this.handleChangeAny} nome_campo= ''/></li>
-                        
-
+                            <Inputed value={any} onChange= {this.handleChangeAny} nome_campo= ''/>
+                        </li>
                     </ul>
-
                     </Box>
-                   
                    </Organization>
                      {admin ? <MenuAdmin/>:<Menu/>}
                 </Forms>
-             
+
 
         )
     }
@@ -76,10 +72,10 @@ class Inputed extends Component{
             <Input
             value= {value}
             onChange={onChange}
-           
-            
+
+
             />
         </>
         )
-    } 
+    }
 }
