@@ -1,5 +1,6 @@
 import styled, {keyframes, css} from 'styled-components';
 
+
 const rotate = keyframes`
     from{
         transform: rotate(0deg);
@@ -14,14 +15,13 @@ export const Button= styled.button`
     border-radius: 10px;
     border-style: solid;
     background-image: linear-gradient(to bottom,#555DA5,#555DA5, #A5DEF9);
-    min-width:240px;
+    min-width:250px;
     min-height: 35px;
     border-width: 0px;
     font-size: 20px;
     color: #FFF;
     font-family: "Bodoni MT Std";
     margin: 5px;
-
     a{
         color: white;
     }
@@ -40,19 +40,17 @@ export const ButtonSubmit= styled.button.attrs(props => {
     border-radius: 10px;
     background-image: linear-gradient(to bottom,#555DA5, #555DA5, #A5DEF9);
     border-width: 0px;
-    max-width: 240px;
+    max-width: 250px;
     font-size: 20px;
     color: #FFF !important;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Bodoni MT Std";
-
     &[disabled]{
         cursor: not-allowed;
         opacity: 0.5;
     }
-
     ${props=> props.load && css`
         svg{
             animation: ${rotate} 3s linear infinite;
@@ -80,7 +78,6 @@ width: 300px;;
     color: #444;
     font-family: "Baskerville";
 }
-
 > a{
     display: flex;
     color: #444;

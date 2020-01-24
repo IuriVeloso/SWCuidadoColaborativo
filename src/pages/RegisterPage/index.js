@@ -152,15 +152,16 @@ class DropdownInput extends Component{
                  <Organization>
                     <h2> {nome_campo} </h2>
                 </Organization>
+               <div>
                 <Select value= {value} onChange={onChange}>
                     {list.map(item=>
                     <option key= {item}> {item} </option>
                     )}
                 </Select>
+                </div> 
             </>
         )
     }
-}
 
 DropdownInput.propTypes = {
     value : PropTypes.string.isRequired,

@@ -1,30 +1,23 @@
 import styled from 'styled-components';
 
-export const Form = styled.form`
-    display: flex;
+export const Forms = styled.form`
+    display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    h3{
-        color: #49508E;
-        padding: 30px 0 3px 0;
-        font-family: "Baskerville" ;
-    }
-
-    >h2{
-        color: #000;
-        padding: 0 3px 0;
-        font-size: 20px;
-        font-family: "Baskerville" ;
-    }
-
-    h1{
-        padding: 40px 0 80px 0;
+    > h1{
+        padding: 40px 0 40px 0;
         max-width: 160px;
         font-size: 30px;
         text-align: center;
         font-family: "Poor Richard";
+    }
+    ul{
+        list-style: none;
+    li{
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
     }
 `
 
@@ -32,14 +25,14 @@ export const Input = styled.input`
     display: flex;
     margin: auto;
     justify-content: center;
-    padding: 5px;
     margin: 0px 0 5px 0;
+    padding: 5px;
     height: 25px;
     width: 300px;
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
-    border-color: ${props=> (props.match ? '#DDD' : '#C13')};
+    border-color: '#DDD';
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
