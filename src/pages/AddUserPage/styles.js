@@ -44,7 +44,7 @@ export const Input = styled.input.attrs(props=> {
     background-color: #FFF;
 `;
 
-export const Input2= styled.input.attrs(props=> {
+export const Textarea= styled.textarea.attrs(props=> {
     return ({
         required: 'required'
     });
@@ -64,6 +64,7 @@ export const Input2= styled.input.attrs(props=> {
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
     type:"text";
+    resize:none;
 `;
 
 export const Select = styled.select.attrs(props=> {
