@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {ButtonSubmit} from '../../components/styles'
 import Menu from '../../components/Menu/index';
 import MenuAdmin from '../../components/Menu_admin/index'
-import {Input, Forms, Select, Organization} from './styles';
+import {Input, Forms, Select, Organization, ButtonSubmit2} from './styles';
 import {Link} from 'react-router-dom';
 
 
@@ -26,7 +26,7 @@ handleChangePacient= e =>
     render(){
         const { search, pacient, loading} = this.state;
         const admin = true;
-        const list_pacient=["Nome", "Nome do Responsável", "Endereço", "Apelido"]
+        const list_pacient=["Nome", "Data de nascimento", "Apelido"]
         return(
                 <Forms onSubmit={this.handleSubmit} >
                     <Organization> <h1>Cuidado Colaborativo</h1> </Organization>
@@ -39,7 +39,7 @@ handleChangePacient= e =>
                       
                     </ul>
                     <ButtonSubmit load={loading}> Pesquisar </ButtonSubmit>
-                   <Link to="adicionar-paciente">  <ButtonSubmit load={loading}> Adicionar Paciente </ButtonSubmit></Link>
+                   <Link to="adicionar-paciente">  <ButtonSubmit2 load={loading}> Adicionar Paciente </ButtonSubmit2></Link>
                    {admin ? <MenuAdmin/>:<Menu/>}    
                 </Forms>
 

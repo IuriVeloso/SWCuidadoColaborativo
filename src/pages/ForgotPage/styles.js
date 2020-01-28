@@ -12,6 +12,12 @@ export const Forms = styled.form`
         text-align: center;
         font-family: "Poor Richard";
     }
+    >h2{
+        color: #000;
+        padding: 0 3px 0;
+        font-size: 20px;
+        font-family: "Baskerville" ;
+    }
     ul{
         list-style: none;
     li{
@@ -25,7 +31,7 @@ export const Input = styled.input`
     display: flex;
     margin: auto;
     justify-content: center;
-    margin: 0px 0 5px 0;
+    margin: 40px 0 10px 0;
     padding: 5px;
     height: 25px;
     width: 300px;
