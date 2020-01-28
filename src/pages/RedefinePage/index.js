@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import './styles.js';
 import { Forms, MissInput, } from './styles';
-import {ButtonSubmit, Organization} from '../../components/styles'
-
+import {ButtonSubmit, Organization} from '../../components/styles';
+import PropTypes from 'prop-types';
+import {FiLoader} from 'react-icons/fi';
 
 
 export default class Register extends Component{
@@ -21,24 +22,18 @@ handleChangePass= e =>
 handleChangePass2= e =>
     this.setState({confirmPass: e.target.value})
 
+handleSubmit = e =>{
+    e.preventDefault();
+    this.setState({loading: true});
+    if (this.state.pass !== this.state.confirmPass)
+        this.setState({ loading: true, error: [...this.state.error, 'Senhas Diferentes'], match: false})
  
-
-    handleSubmit = e =>{
-        e.preventDefault();
-        this.setState({loading: true});
-        if (this.state.pass !== this.state.confirmPass)
-            this.setState({error: [...this.state.error, 'Senhas Diferentes'], match: false})
-        else
-            this.setState({error: [], match: true})
-    
-        console.log(this.state)
-    
-        this.setState({
-            pass:"",
-            confirmPass:"",
-            loading: false,
-        });
-    }
+    else
+        this.setState({match:true})
+        this.setState({loading:false})
+ 
+    console.log(this.state);
+}
 
     render(){
         const {pass, confirmPass, loading, match}= this.state;
@@ -56,8 +51,12 @@ handleChangePass2= e =>
                             <MissInputed value={confirmPass} onChange= {this.handleChangePass2} nome_campo= 'Confirmação da Senha' match={match} /></li>
                         
                        
-                    </ul>
-                    <ButtonSubmit load={loading}> Redefinir Senha </ButtonSubmit>
+                    </ul>    
+                    {!match ? <h2> Senhas incorretas</h2> : null}
+                    <ButtonSubmit load={loading}> 
+                    {loading ? <FiLoader color="#FFF" size= "13"/> : "Redefinir Senha"}
+                     </ButtonSubmit>
+                
                 </Forms>
 
         )
@@ -82,3 +81,9 @@ class MissInputed extends Component{
         )
     }
 }
+MissInputed.propTypes={
+    value : PropTypes.string.isRequired,
+    onChange : PropTypes.func.isRequired,
+    nome_campo : PropTypes.string.isRequired,
+    match : PropTypes.bool.isRequired
+};

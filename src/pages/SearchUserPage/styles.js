@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {keyframes, css} from 'styled-components';
 
 export const Forms = styled.form`
     display:flex;
@@ -101,4 +101,41 @@ align-items: baseline;
 
 }
 `
-
+export const ButtonSubmit2= styled.button.attrs(props => {
+    return ({
+        type: 'submit',
+        disabled: props.load,
+    });
+})`
+    width:250px;
+    margin: 4%;
+    min-height: 35px;
+    padding: 5px 45px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom,#555DA5, #555DA5, #A5DEF9);
+    border-width: 0px;
+    font-size: 20px;
+    color: #FFF !important;
+    font-family: "Bodoni MT Std";
+    &[disabled]{
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+    ${props=> props.load && css`
+        svg{
+            animation: ${rotate} 3s linear infinite;
+            color: darkblue;
+            }
+        `}
+    a{
+        color: white;
+    }
+`;
+const rotate = keyframes`
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+`;

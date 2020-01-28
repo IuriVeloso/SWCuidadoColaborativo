@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {ButtonSubmit} from '../../components/styles'
 import Menu from '../../components/Menu/index';
 import MenuAdmin from '../../components/Menu_admin/index'
-import {Input, TextArea, Forms, Select, Organization} from './styles';
+import {Input, Input2, Forms, Select, Organization} from './styles';
 
 
 export default class Register extends Component{
@@ -129,7 +129,7 @@ class Inputed2 extends Component{
             <Organization>
                 <h2> {nome_campo} </h2>
             </Organization>
-            <TextArea
+            <Input2
             value= {value}
             onChange={onChange}
             
