@@ -51,7 +51,6 @@ handleSubmit = async e => {
         <>
             <Form onSubmit={this.handleSubmit} >
                 <h1> Cuidado Colaborativo</h1>
-
                 <Inputed match={match_email} type='text' nomeCampo='Email:' value={email} handleChange={(email)=>this.handleChange(email)} name='email' />
                 <Inputed match={match_password} type='password' nomeCampo='Senha:' value={password} handleChange={(password)=>this.handleChange(password)} name='password'/>
                 <ButtonSubmit load={loading} >

@@ -6,7 +6,7 @@ export const Forms = styled.form`
     align-items: center;
     flex-direction: column;
     padding-bottom:100px;
-   
+
     > h1{
         padding: 40px 0 40px 0;
         max-width: 160px;
@@ -44,7 +44,7 @@ export const Input = styled.input.attrs(props=> {
     background-color: #FFF;
 `;
 
-export const TextArea= styled.textarea.attrs(props=> {
+export const Textarea= styled.textarea.attrs(props=> {
     return ({
         required: 'required'
     });
@@ -63,7 +63,8 @@ export const TextArea= styled.textarea.attrs(props=> {
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
-    type="text";
+    type:"text";
+    resize:none;
 `;
 
 export const Select = styled.select.attrs(props=> {

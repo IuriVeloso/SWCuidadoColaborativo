@@ -35,7 +35,7 @@ export const Input = styled.input.attrs(props=> {
     margin: 0px 0 5px 0;
     padding: 5px;
     height: 45px;
-    width: 450px;
+    width: 397px;
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
@@ -43,6 +43,7 @@ export const Input = styled.input.attrs(props=> {
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
+    
 `;
 
 export const Select = styled.select.attrs(props=> {
@@ -69,7 +70,7 @@ display: flex;
 justify-content: space-between;
 flex-wrap: wrap;
 align-items: baseline;
-width: 450px;
+max-width: 400px;
 
 
 > h2{
@@ -87,10 +88,19 @@ width: 450px;
 `;
 
 export const Text = styled.text`
-font-size: 28px;
+font-size: 18px;
 color: #000;
 font-family: "Baskerville";
 margin-bottom:2px;
+margin-top:20px;
+`
+
+export const Text2 = styled.text`
+font-size: 34px;
+color: #333;
+font-family: "Baskerville";
+margin-bottom:2px;
+font-weight:500;
 margin-top:20px;
 `
 export const Posi = styled.div`
@@ -98,8 +108,8 @@ display: flex;
 justify-content: space-between;
 flex-wrap: wrap;
 align-items: baseline;
-width: 300px;
-margin-left:370px;
+max-width: 300px;
+margin-left:320px;
 > h2{
     font-size: 20px;
     color: #444;
@@ -113,9 +123,8 @@ margin-left:370px;
     font-family: "Baskerville";
 }
 `
-
 export const Box = styled.div`
-width:500px;
+width:400px;
 height:400px;
 margin-top:10px;
 border: 2px solid grey;
