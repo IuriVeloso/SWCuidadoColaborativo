@@ -14,33 +14,31 @@ export default class Register extends Component{
         match: true,
         loading: false,
         error:[],
+
        
     }; 
 
-alerta = () =>{
-    alert("E-mail enviado!")
-};
 
-handleChange= (e) =>{
+
+handleChange=  (e) =>{
     this.setState({ [e.target.name]: e.target.value})
 };
 
-handleSubmit = async e => {
+handleSubmit = async e =>{
     e.preventDefault();
-    this.setState({loading: true})
+    this.setState({loading: true});
 
-    const email = this.state.email;
+    const email = this.state;
 
-    if (!EmailValidator.validate(email))
+    if (!EmailValidator.validate(this.state.email))
         this.setState({match: false});
-    else
-        this.setState({match: true});
+        
 
-    this.setState({
-        email:'',
-        loading: false,
-    })
-};
+    else{
+        this.setState({match: true, loading:false, email: ''});
+        return alert("E-mail enviado");
+    }
+  };
 
 
     render(){
@@ -54,9 +52,10 @@ handleSubmit = async e => {
                       
                         <Inputed match={match} type='text'  nomeCampo='' value={email} handleChange={(email)=>this.handleChange(email)} name='email' />
              
-                  <ButtonSubmit onClick={this.alerta} load={loading}> Enviar Email </ButtonSubmit>
-              
                      {!match ? <h2> Email inválido</h2> : null}
+
+                  <ButtonSubmit   > Enviar Email </ButtonSubmit>
+               
               
                   
              

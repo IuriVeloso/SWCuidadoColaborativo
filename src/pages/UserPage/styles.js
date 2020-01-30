@@ -11,9 +11,9 @@ export const Forms = styled.form`
     > h1{
         padding: 40px 0 40px 0;
         max-width: 160px;
-        font-size: 30px;
+        font-size: 35px;
         text-align: center;
-        font-family: "Poor Richard";
+        font-family: 'Amatic SC', sans-serif;
     }
     ul{
         list-style: none;

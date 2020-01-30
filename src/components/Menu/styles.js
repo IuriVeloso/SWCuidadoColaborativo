@@ -8,7 +8,7 @@ export const Organization = styled.div`
     min-width: 100%;
     bottom: 0;
     position: fixed;
-    color: #555DA5;
+    color: #265E4A;
     font-size: 40px;
     padding: 5px 0;
     > h2{
@@ -17,6 +17,6 @@ export const Organization = styled.div`
         font-family: "Baskerville";
     }
     > a{
-        color: #555DA5;
+        color: #265E4A;
     }
 `
