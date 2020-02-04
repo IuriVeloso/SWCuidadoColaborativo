@@ -26,7 +26,7 @@ handleSubmit = async e =>{
 
     const email = this.state;
 
-    if (!EmailValidator.validate(this.state.email))
+    if (!EmailValidator.validate(email))
         this.setState({match: false});
     else{
         this.setState({match: true, loading:false, email: ''});
@@ -44,7 +44,7 @@ handleSubmit = async e =>{
 
                         <Inputed match={match} type='text'  nomeCampo='' value={email} handleChange={(email)=>this.handleChange(email)} name='email' />
                         <ButtonSubmit onClick={this.alerta} load={loading}> Enviar Email </ButtonSubmit>
-             
+
                      {!match ? <h2> Email inválido</h2> : null}
 
                 </Forms>

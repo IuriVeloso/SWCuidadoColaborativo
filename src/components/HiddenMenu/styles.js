@@ -29,3 +29,4 @@ export const Organization = styled.div`
         }
     }
 `
+//radial-gradient(to left, rgb(255,128,219,0.5))

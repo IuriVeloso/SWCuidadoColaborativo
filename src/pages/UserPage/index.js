@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import { Forms, Text, Text2, Posi, Organization, Input, Box } from './styles.js';
-import {Button, ButtonSubmit,  } from '../../components/styles';
+//import {Button, ButtonSubmit,  } from '../../components/styles';
 import Menu from '../../components/Menu/index';
 import MenuAdmin from '../../components/Menu_admin/index'
 
@@ -26,7 +26,7 @@ handleChangeAny= e =>
     this.setState({any: e.target.value});
 
     render(){
-        const {pacient, any, nis, loading} = this.state;
+        const {pacient, any, nis} = this.state;
         const admin=true;
         return(
                 <Forms onSubmit={this.handleSubmit} >
@@ -34,10 +34,10 @@ handleChangeAny= e =>
                     <ul>
                     <ul>
                       <li>
-                            <Text2>Paciente </Text2>
+                            <Text2>Paciente: {pacient} </Text2>
                       </li>
                        <li>
-                            <Text>Id: </Text>
+                            <Text>Id: {nis}</Text>
                        </li>
                        <li>
                             <Text>Nome: </Text>
@@ -98,21 +98,10 @@ handleChangeAny= e =>
                           <Link to=""> Mais informações </Link>
                     </Posi>
 
-                   <Box>
-<<<<<<< Updated upstream
-
+                    <Box>
                             <Inputed value={any} onChange= {this.handleChangeAny} nome_campo= ''/>
-
-=======
-
-                            <Inputed value={any} onChange= {this.handleChangeAny} nome_campo= ''/>
-
-
->>>>>>> Stashed changes
-
-
                     </Box>
-
+                    </ul>
                    </Organization>
                      {admin ? <MenuAdmin/>:<Menu/>}
                 </Forms>
