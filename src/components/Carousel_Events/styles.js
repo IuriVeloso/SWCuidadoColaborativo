@@ -5,9 +5,9 @@ export const Slider = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: baseline;
-    background-color:rgb(255,255,255, 0.5);
+    background-color:  rgb(206,206,206, 0.7);
     border-radius: 10px;
-    border: solid 2px rgb(194, 129, 255, 0.5);
+    border: solid 1px none;
     padding: 5px 30px;
     margin: 10px;
     min-height: 120px;
@@ -15,9 +15,10 @@ export const Slider = styled.div`
     position: relative;
     > h1{
         align-self: center;
-        font-size: 20px;
+        font-size: 21px;
         margin-bottom: 5px;
         font-family: "Baskerville";
+        font-weight:500;
     }
     > small{
         font-family: "Baskerville";
@@ -34,6 +35,7 @@ export const SliderNext = styled.button.attrs(props=> {
 })`
     all: unset;
     cursor: pointer;
+    color:#2F2F2F;
     &[disabled]{
         cursor: not-allowed;
         opacity: 0.4;
@@ -48,6 +50,7 @@ export const SliderPrev = styled.button.attrs(props=> {
 })`
     all: unset;
     cursor: pointer;
+    color:#2F2F2F;
     &[disabled]{
         cursor: not-allowed;
         opacity: 0.4;

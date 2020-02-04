@@ -5,20 +5,12 @@ export const Forms = styled.form`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom:10px;
     > h1{
         padding: 40px 0 40px 0;
         max-width: 160px;
         font-size: 35px;
         text-align: center;
         font-family: 'Amatic SC', sans-serif;
-    }
-
-    >h2{
-        color: #000;
-        padding: 0 3px 0;
-        font-size: 20px;
-        font-family: "Baskerville" ;
     }
     ul{
         list-style: none;
@@ -29,27 +21,21 @@ export const Forms = styled.form`
     }
 `
 
-export const Input = styled.input.attrs(props=> {
-    return ({
-        required: 'required'
-    });
-})`
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    margin: 0px 0 5px 0;
-    padding: 5px;
-    height: 25px;
-    width: 300px;
-    font-size: 16px;
-    border-width: 1px;
-    border-style: outset;
-    border-color: #DDD;
-    border-radius: 6px;
-    box-shadow: 1px 1px 1px grey;
-    background-color: #FFF;
+export const Input = styled.input`
+display: flex;
+margin: auto;
+justify-content: center;
+margin: 0px 0 5px 0;
+padding: 5px;
+height: 28px;
+width: 300px;
+font-size: 16px;
+border-width: 1px;
+border-color: ${props=> (props.match ? '#DDD' : '#C13')};
+border-radius: 6px;
+border: white;
+background-color: #FFF;
 `;
-
 export const Select = styled.select`
     display: flex;
     margin: auto;
@@ -60,7 +46,7 @@ export const Select = styled.select`
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
-    border-color: '#AAA';
+    border-color: '#DDD';
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
@@ -70,7 +56,7 @@ export const MissInput = styled.input`
 display: flex;
 margin: auto;
 justify-content: center;
-margin: 0px 0 5px 0;
+margin: 0px 0 10px 0;
 padding: 5px;
 height: 25px;
 width: 300px;

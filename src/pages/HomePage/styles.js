@@ -3,32 +3,40 @@ import styled from 'styled-components';
 export const Recentes = styled.div`
     background-color: rgb(225,225,225, 0.7) ;
     border: solid 0px rgb(121,121,121, 0.7);
-    margin: 10px 20px;
+    margin: 8px 20px;
     padding: 0 8px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    max-width: 400px;
+    width: 300px;
     border-radius: 8px;
     justify-content: space-between;
-    align-content: center;
-    align-items: center;
+    align-content: left;
+    align-items: left;
+ 
 
     > h1{
-        font-size: 21px;
+        font-size: 19px;
         font-family: "Baskerville";
-        margin: 2px;
+        font-weight:500;
+        margin:1px;
+        color:#444;
     };
     > h2{
-        font-size: 21px;
+        font-size: 14px;
         font-family: "Baskerville";
+        color:#414141;
+        font-weight:500;
     }
     > small{
         font-size: 12px;
-        padding: 0 80px;
-        margin: auto;
         color: #5d5d5d;
         font-weight: bold;
+        text-align: right;
+        padding-bottom:3px;
+        margin-top:-8px;
     }
+  
 `
 export const ButtonUser = styled.button`
     font-size: 21px;
@@ -42,6 +50,7 @@ export const ButtonUser = styled.button`
     padding: 2px 40px;
     border-radius: 5px;
     background-color:  rgb(206,206,206, 0.7) ;
+    font-weight:500;
     > a {color: #000 !important} ;
     `
 
@@ -53,10 +62,14 @@ export const Org1 = styled.div`
     margin: auto;
     > h1{
         align-self: baseline;
-        margin-top: 10px;
+        margin-top: 15px;
         margin-left: 15px;
-        font-size: 25px;
+        font-size: 22px;
         font-family: "Baskerville";
+        font-weight:500;
+    }
+    >a{
+        color: #000;
     }
 `
 export const OrgSlider = styled.div`
@@ -66,6 +79,7 @@ export const OrgSlider = styled.div`
     font-size: 40px;
     color: #000;
     margin-top: 2%;
+  
 `
 
 export const ButtonEvents = styled.button`
@@ -80,5 +94,7 @@ export const ButtonEvents = styled.button`
     padding: 2px 40px;
     border-radius: 5px;
     background-color: rgb(255,255,255, 0.5);
+    font-weight:500;
     > a {color: #000 !important} ;
     `
+   
