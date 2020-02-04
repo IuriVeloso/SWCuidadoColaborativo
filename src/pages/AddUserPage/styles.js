@@ -5,7 +5,7 @@ export const Forms = styled.form`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom:100px;
+    padding-bottom:80px;
 
     > h1{
         padding: 40px 0 40px 0;

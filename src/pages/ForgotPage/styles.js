@@ -18,12 +18,6 @@ export const Forms = styled.form`
         font-size: 20px;
         font-family: "Baskerville" ;
     }
-    >h2{
-        color: #000;
-        padding: 0 3px 0;
-        font-size: 20px;
-        font-family: "Baskerville" ;
-    }
     ul{
         list-style: none;
     li{
