@@ -6,7 +6,7 @@ export const Forms = styled.form`
     align-items: center;
     flex-direction: column;
     padding-bottom:100px;
-   
+
     > h1{
         padding: 40px 0 40px 0;
         max-width: 160px;
@@ -43,7 +43,7 @@ export const Input = styled.input.attrs(props=> {
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
     background-image: url('https://www.w3schools.com/howto/searchicon.png');
-    background-position: 3px 1px; 
+    background-position: 3px 1px;
     background-repeat: no-repeat;
     padding: 4px 2px 5px 30px;
 `;

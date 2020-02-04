@@ -9,16 +9,12 @@ import {ButtonSubmit, Organization} from '../../components/styles'
 
 export default class Register extends Component{
     state={
-       
+
         email:"",
         match: true,
         loading: false,
         error:[],
-
-       
-    }; 
-
-
+    };
 
 handleChange=  (e) =>{
     this.setState({ [e.target.name]: e.target.value})
@@ -32,33 +28,24 @@ handleSubmit = async e =>{
 
     if (!EmailValidator.validate(this.state.email))
         this.setState({match: false});
-        
-
     else{
         this.setState({match: true, loading:false, email: ''});
         return alert("E-mail enviado");
     }
   };
-
-
     render(){
         const {email, loading, match}= this.state;
 
         return(
                 <>
-               
+
                 <Forms onSubmit={this.handleSubmit}>
                     <h1>Cuidado Colaborativo</h1>
-                      
+
                         <Inputed match={match} type='text'  nomeCampo='' value={email} handleChange={(email)=>this.handleChange(email)} name='email' />
+                        <ButtonSubmit onClick={this.alerta} load={loading}> Enviar Email </ButtonSubmit>
              
                      {!match ? <h2> Email inválido</h2> : null}
-
-                  <ButtonSubmit   > Enviar Email </ButtonSubmit>
-               
-              
-                  
-             
 
                 </Forms>
 

@@ -13,7 +13,7 @@ export default class Register extends Component{
         any:"",
         loading: false,
         error:[],
-      
+
     };
 
 handleChangePacient= e =>
@@ -29,10 +29,10 @@ handleChangeAny= e =>
         const {pacient, any, nis, loading} = this.state;
         const admin=true;
         return(
-                <Forms onSubmit={this.handleSubmit} > 
-                    
-                <Organization>  
-                    <ul>  
+                <Forms onSubmit={this.handleSubmit} >
+                <Organization>
+                    <ul>
+                    <ul>
                       <li>
                             <Text2>Paciente </Text2>
                       </li>
@@ -97,19 +97,26 @@ handleChangeAny= e =>
                     <Posi>
                           <Link to=""> Mais informações </Link>
                     </Posi>
- 
-                   <Box>
-                  
-                            <Inputed value={any} onChange= {this.handleChangeAny} nome_campo= ''/>
-                        
 
-            
+                   <Box>
+<<<<<<< Updated upstream
+
+                            <Inputed value={any} onChange= {this.handleChangeAny} nome_campo= ''/>
+
+=======
+
+                            <Inputed value={any} onChange= {this.handleChangeAny} nome_campo= ''/>
+
+
+>>>>>>> Stashed changes
+
+
                     </Box>
-                   
+
                    </Organization>
                      {admin ? <MenuAdmin/>:<Menu/>}
                 </Forms>
-             
+
 
         )
     }
@@ -125,10 +132,10 @@ class Inputed extends Component{
             <Input
             value= {value}
             onChange={onChange}
-           
-            
+
+
             />
         </>
         )
-    } 
+    }
 }
