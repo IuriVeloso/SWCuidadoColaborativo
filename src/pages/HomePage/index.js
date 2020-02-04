@@ -15,20 +15,22 @@ export default class Homepage extends Component{
         return(
             <>
             <Org1>
+                <br></br>
                 <h1> Usuários Recentes</h1>
+                <br></br>
                 <Link to="/paciente"><Recentes>
                     <h1> Marcus Vinicius</h1>
-                    <h1> Dona Marta</h1>
-                    <small> Última atualização: 11 horas atrás </small>
+                       <h2> Dona Marta</h2>
+                    <small> Última atualização: 11 horas atrás </small>  
                 </Recentes></Link>
                 <Recentes>
                     <h1> João Marcelo</h1>
-                    <h1> Dona Marta</h1>
+                    <h2> Dona Marta</h2>
                     <small> Última atualização: 1 dia atrás </small>
                 </Recentes>
                 <Recentes>
                     <h1> Vitor (Joca)</h1>
-                    <h1> Pavão</h1>
+                    <h2> Pavão</h2>
                     <small> Última atualização: 2 dias atrás </small>
                 </Recentes>
                <Link to="/procurar-paciente"> <ButtonUser>Usuários </ButtonUser></Link>

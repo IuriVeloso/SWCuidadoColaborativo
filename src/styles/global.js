@@ -11,6 +11,22 @@ export default createGlobalStyle`
     @import url(http://db.onlinewebfonts.com/c/ad7c34620a5c83f74ecc52bf562be6a1?family=Bodoni+MT+Std);
     @import url(http://db.onlinewebfonts.com/c/1333b13c4f911f3160f1c2822573f70c?family=Poor+Richard);
     @import url(http://db.onlinewebfonts.com/c/f929174bda22c1821db22ab9760b082a?family=Baskerville);
+    @import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Bad+Script|Rajdhani:300|Shadows+Into+Light&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Megrim&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Life+Savers&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=BioRhyme:200&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Assistant:200&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Assistant:200&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Exo:200&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Pompiere&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Text+Me+One&display=swap');
 
     html, body, #app{
         min-height: 100%;

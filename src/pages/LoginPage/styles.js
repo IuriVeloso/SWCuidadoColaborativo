@@ -7,7 +7,7 @@ export const Form = styled.form`
     flex-direction: column;
 
     h3{
-        color: #49508E;
+       color: #3B7063;
         padding: 30px 0 3px 0;
         font-family: "Baskerville" ;
     }
@@ -20,11 +20,11 @@ export const Form = styled.form`
     }
 
     h1{
-        padding: 40px 0 80px 0;
+        padding: 40px 0 60px 0;
         max-width: 160px;
-        font-size: 30px;
+        font-size: 35px;
         text-align: center;
-        font-family: "Poor Richard";
+        font-family: 'Amatic SC', sans-serif;
     }
 `
 

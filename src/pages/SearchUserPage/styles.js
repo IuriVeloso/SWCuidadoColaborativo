@@ -6,13 +6,13 @@ export const Forms = styled.form`
     align-items: center;
     flex-direction: column;
     padding-bottom:100px;
-   
+
     > h1{
         padding: 40px 0 40px 0;
         max-width: 160px;
-        font-size: 30px;
+        font-size: 35px;
         text-align: center;
-        font-family: "Poor Richard";
+        font-family: 'Amatic SC', sans-serif;
     }
     ul{
         list-style: none;
@@ -43,7 +43,7 @@ export const Input = styled.input.attrs(props=> {
     box-shadow: 1px 1px 1px grey;
     background-color: #FFF;
     background-image: url('https://www.w3schools.com/howto/searchicon.png');
-    background-position: 3px 1px; 
+    background-position: 3px 1px;
     background-repeat: no-repeat;
     padding: 4px 2px 5px 30px;
 `;
@@ -92,11 +92,11 @@ align-items: baseline;
     display: flex;
     align-items: flex-end;
     justify-content : space-evenly;
-    padding: 40px 0 130px 0;
+    padding: 40px 0 150px 0;
     max-width: 160px;
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
-    font-family: "Poor Richard";
+    font-family: 'Amatic SC', sans-serif;
     margin-bottom:-100px;
 
 }
@@ -112,7 +112,7 @@ export const ButtonSubmit2= styled.button.attrs(props => {
     min-height: 35px;
     padding: 5px 45px;
     border-radius: 10px;
-    background-image: linear-gradient(to bottom,#555DA5, #555DA5, #A5DEF9);
+    background-color:#4B8C7C;
     border-width: 0px;
     font-size: 20px;
     color: #FFF !important;
