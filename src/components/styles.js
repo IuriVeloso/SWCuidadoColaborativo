@@ -11,17 +11,19 @@ const rotate = keyframes`
 `;
 
 export const Button= styled.button`
-    padding: 5px 18px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 40px ;
     border-radius: 10px;
     border-style: solid;
     background-color: #4B8C7C;
-    min-width:250px;
+    min-width:150px;
     min-height: 35px;
     border-width: 0px;
     font-size: 20px;
     color: #FFF;
     font-family: "Bodoni MT Std";
-    margin: 5px;
     a{
         color: white;
     }

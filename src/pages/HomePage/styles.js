@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Recentes = styled.div`
-    background-color: rgb(225,225,225, 0.7) ;
-    border: solid 0px rgb(121,121,121, 0.7);
+    background-color: rgb(225,225,0, 0.3) ;
     margin: 8px 20px;
     padding: 0 8px;
     display: flex;

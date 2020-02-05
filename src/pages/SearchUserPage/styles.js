@@ -108,7 +108,7 @@ export const ButtonSubmit2= styled.button.attrs(props => {
     });
 })`
     width:250px;
-    margin: 4%;
+    margin: 4% 0;
     min-height: 35px;
     padding: 5px 45px;
     border-radius: 10px;

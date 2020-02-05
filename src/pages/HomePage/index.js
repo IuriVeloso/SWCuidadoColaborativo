@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom';
 import MenuSlider from '../../components/Carousel_Events/index.js';
 import Menu from '../../components/Menu/index';
 import MenuAdmin from '../../components/Menu_admin/index'
-import {Recentes, Org1, OrgSlider, ButtonUser, ButtonEvents} from './styles';
+import {Recentes, Org1, OrgSlider} from './styles';
+import { Button } from '../../components/styles';
 
 export default class Homepage extends Component{
     state= {
@@ -33,12 +34,12 @@ export default class Homepage extends Component{
                     <h2> Pavão</h2>
                     <small> Última atualização: 2 dias atrás </small>
                 </Recentes>
-               <Link to="/procurar-paciente"> <ButtonUser>Usuários </ButtonUser></Link>
+               <Link to="/procurar-paciente"> <Button>Usuários </Button></Link>
                 <h1> Próximos Eventos</h1>
                 <OrgSlider>
                     <MenuSlider/>
                 </OrgSlider>
-                <Link to="/"><ButtonEvents type="button">Eventos </ButtonEvents> </Link>
+                <Link to="/"><Button type="button">Eventos </Button> </Link>
              {admin ? <MenuAdmin/>:<Menu/>}
             </Org1>
             </>

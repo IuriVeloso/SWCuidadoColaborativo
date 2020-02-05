@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import { Forms, Text, Text2, Posi, Organization, Input, Box } from './styles.js';
 //import {Button, ButtonSubmit,  } from '../../components/styles';
 import Menu from '../../components/Menu/index';
@@ -11,6 +10,7 @@ export default class Register extends Component{
         pacient:"",
         nis:"",
         any:"",
+        show: false,
         loading: false,
         error:[],
 
@@ -25,8 +25,12 @@ handleChangeNis= e =>
 handleChangeAny= e =>
     this.setState({any: e.target.value});
 
+showInfo =(show) =>{
+    this.setState({show: !show});
+    console.log(show);
+}
     render(){
-        const {pacient, any, nis} = this.state;
+        const {pacient, any, nis, show} = this.state;
         const admin=true;
         return(
                 <Forms onSubmit={this.handleSubmit} >
@@ -34,13 +38,10 @@ handleChangeAny= e =>
                     <ul>
                     <ul>
                       <li>
-                            <Text2>Paciente: {pacient} </Text2>
+                            <Text2>Usuário  </Text2>
                       </li>
                        <li>
-                            <Text>Id: {nis}</Text>
-                       </li>
-                       <li>
-                            <Text>Nome: </Text>
+                            <Text>Nome: {pacient}</Text>
                        </li>
                        <li>
                             <Text>Apelido:</Text>
@@ -48,7 +49,7 @@ handleChangeAny= e =>
                        <li>
                             <Text>Responsável: </Text>
                        </li>
-                       <li>
+                       {show && <> <li>
                             <Text>Relação do Responsável: </Text>
                        </li>
                        <li>
@@ -70,7 +71,7 @@ handleChangeAny= e =>
                             <Text>Escola: </Text>
                        </li>
                        <li>
-                            <Text>NIS:</Text>
+                            <Text>NIS:{nis}</Text>
                        </li>
                        <li>
                             <Text>Resumo do Caso: </Text>
@@ -92,10 +93,11 @@ handleChangeAny= e =>
                        </li>
                        <li>
                             <Text>Data de nascimento:</Text>
-                       </li>
+                       </li></>
+                    }
                     </ul>
                     <Posi>
-                          <Link to=""> Mais informações </Link>
+                          <button onClick={() =>this.showInfo(show)}> Mais informações </button>
                     </Posi>
 
                     <Box>
