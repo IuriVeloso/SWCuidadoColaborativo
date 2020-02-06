@@ -8,11 +8,11 @@ export const Organization = styled.div`
     min-width: 100%;
     bottom: 0;
     position: fixed;
-    color: #555DA5;
+    color: #3B7063;
     font-size: 40px;
     padding-top: 5px;
 
     > a{
-        color: #555DA5;
+        color: #3B7063;
     }
 `

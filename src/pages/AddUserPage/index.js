@@ -75,13 +75,13 @@ handleChangeSummary= e =>
                         <li>
                             <Inputed value={fullName} onChange= {this.handleChangeFullName} nome_campo= 'Nome Completo'/></li>
                         <li>
-                            <Inputed value={mother} onChange= {this.handleChangeMother} nome_campo= 'Mãe'  /></li> 
+                            <Inputed value={nickname} onChange= {this.handleChangeNickname} nome_campo= 'Apelido'/></li>
                         <li>
                              <DropdownInput value={responsible} onChange= {this.handleChangeResponsible} nome_campo= 'Responsável' list={list_responsible}/></li>
                         <li>
                             <Inputed value={name} onChange= {this.handleChangeName} nome_campo= 'Nome do Responsável' /></li>
                         <li>
-                            <Inputed3 value={birth} onChange= {this.handleChangeBirth} nome_campo= 'Data de Nascimento'  /></li>
+                            <DropdownInput value={territory} onChange= {this.handleChangeTerritory} nome_campo= 'Território' list={list_territory}/></li>
                         <li>
                             <Inputed value={adress} onChange= {this.handleChangeAdress} nome_campo= 'Endereço'/></li>
                         <li>
@@ -89,10 +89,10 @@ handleChangeSummary= e =>
                         <li>
                             <DropdownInput value={unity} onChange= {this.handleChangeUnity} nome_campo= 'Unidade de Referência' list={list_unity}/></li>
                         <li>
-                            <DropdownInput value={territory} onChange= {this.handleChangeTerritory} nome_campo= 'Território' list={list_territory}/></li>
-                            <li>
-                            <Inputed value={nickname} onChange= {this.handleChangeNickname} nome_campo= 'Apelido'/></li>
-                            <li>
+                            <Inputed3 value={birth} onChange= {this.handleChangeBirth} nome_campo= 'Data de Nascimento'  /></li>
+                        <li>
+                            <Inputed value={mother} onChange= {this.handleChangeMother} nome_campo= 'Mãe'  /></li> 
+                        <li>    
                             <Inputed2 value={summary} onChange= {this.handleChangeSummary} nome_campo= 'Resumo do Caso'/></li>
                     </ul>
                     <ButtonSubmit load={loading}> Adicionar Paciente </ButtonSubmit>
