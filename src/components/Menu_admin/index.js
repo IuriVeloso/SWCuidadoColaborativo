@@ -20,11 +20,11 @@ export default class MenuAdmin extends Component{
             <>
             <HiddenMenu show={show}/>
             <Organization>
-                    <FaAddressCard/>
-                    <Link to="/adicionar-paciente"> <FaUserPlus/> </Link>
-                    <Link to="/procurar-paciente"> <FaSearch/> </Link>
-                    <FaBell/>
-                    <FaBars cursor= 'pointer' onClick={() => this.handleMenuAppear({show})}/>
+                <FaAddressCard/>
+                <Link to="/adicionar-paciente"> <FaUserPlus/> </Link>
+                <Link to="/procurar-paciente"> <FaSearch/> </Link>
+                <FaBell/>
+                <FaBars cursor= 'pointer' onClick={() => this.handleMenuAppear({show})}/>
             </Organization>
             </>
         )};

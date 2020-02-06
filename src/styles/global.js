@@ -1,5 +1,5 @@
 import { createGlobalStyle} from 'styled-components';
-import background from '../assets/1125x2436.png';
+import background from '../assets/Imagem2.jpg';
 
 export default createGlobalStyle`
     *{
@@ -8,9 +8,9 @@ export default createGlobalStyle`
         outline: 0;
         box-sizing: border-box;
     }
-    @import url(http://db.onlinewebfonts.com/c/ad7c34620a5c83f74ecc52bf562be6a1?family=Bodoni+MT+Std);
-    @import url(http://db.onlinewebfonts.com/c/1333b13c4f911f3160f1c2822573f70c?family=Poor+Richard);
-    @import url(http://db.onlinewebfonts.com/c/f929174bda22c1821db22ab9760b082a?family=Baskerville);
+    @import url('http://db.onlinewebfonts.com/c/ad7c34620a5c83f74ecc52bf562be6a1?family=Bodoni+MT+Std');
+    @import url('http://db.onlinewebfonts.com/c/1333b13c4f911f3160f1c2822573f70c?family=Poor+Richard');
+    @import url('http://db.onlinewebfonts.com/c/f929174bda22c1821db22ab9760b082a?family=Baskerville');
     @import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
@@ -37,6 +37,7 @@ export default createGlobalStyle`
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        background-attachment: fixed;
     }
     input , a, form {
         text-decoration: none !important;
