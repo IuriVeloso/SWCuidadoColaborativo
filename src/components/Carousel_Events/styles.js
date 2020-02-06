@@ -5,7 +5,7 @@ export const Slider = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: baseline;
-    background-color:  rgb(225,225,0, 0.3);
+    background-color:  #C4EAA7;
     border-radius: 10px;
     border: solid 1px none;
     padding: 5px 30px;
