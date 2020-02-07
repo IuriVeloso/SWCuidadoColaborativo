@@ -5,9 +5,7 @@ export const Forms = styled.form`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 100px;
-    margin-top: 20px;
-
+    margin-top: 5%;
     > h1 {
         padding: 40px 0 40px 0;
         max-width: 160px;
@@ -29,13 +27,10 @@ export const Input = styled.input.attrs(() => {
         required: 'required'
     };
 })`
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    margin: 0px 0 5px 0;
-    padding: 5px;
+    margin-top: 3px;
     height: 45px;
-    width: 397px;
+    padding: 0 3px;
+    width: 290px;
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
@@ -45,43 +40,27 @@ export const Input = styled.input.attrs(() => {
     background-color: #fff;
 `;
 
-export const Select = styled.select.attrs(() => {
-    return {
-        required: 'required'
-    };
-})`
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    margin: 10px 0px 15px 10px;
-    height: 25px;
-    width: 170px;
-    font-size: 16px;
-    border-width: 1px;
-    border-style: outset;
-    border-color: #ddd;
-    border-radius: 6px;
-    box-shadow: 1px 1px 1px grey;
-    background-color: #fff;
-`;
 export const Organization = styled.div`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: baseline;
-    max-width: 400px;
-
+    flex-direction: column;
+    width: 100%;
+    margin-left: 3%;
+    max-width: 300px;
     > h2 {
         font-size: 20px;
         color: #444;
         font-family: 'Baskerville';
     }
-    > a {
+    > ul {
         display: flex;
-        color: #444;
-        font-size: 15px;
-        font-weight: bold;
-        font-family: 'Baskerville';
+        justify-content: space-between;
+        align-items: center;
+    }
+    > ul button {
+        background: none;
+        border: none;
+        justify-self: flex-end;
+        align-self: flex-end;
+        margin-left: 0px;
     }
 `;
 
@@ -106,24 +85,15 @@ export const Posi = styled.div`
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: baseline;
-    max-width: 300px;
-    margin-left: 320px;
-    > h2 {
-        font-size: 20px;
-        color: #444;
-        font-family: 'Baskerville';
-    }
-    > a {
-        display: flex;
-        color: #444;
-        font-size: 13px;
-        font-weight: bold;
-        font-family: 'Baskerville';
-    }
 `;
 export const Box = styled.div`
-    width: 400px;
-    height: 400px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    min-width: 300px;
+    width: 85%;
+    height: 200px;
     margin-top: 10px;
     border: 2px solid grey;
     border-radius: 8px;

@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import {
-    Forms,
-    Text,
-    Text2,
-    Posi,
-    Organization,
-    Input,
-    Box
-} from './styles.js';
+import { Forms, Text, Text2, Organization, Input, Box } from './styles.js';
 // import {Button, ButtonSubmit,  } from '../../components/styles';
 import Menu from '../../components/Menu/index';
 import MenuAdmin from '../../components/Menu_admin/index';
@@ -106,23 +98,16 @@ export default class Register extends Component {
                                 </>
                             )}
                         </ul>
-                        <Posi>
-                            <button
-                                type="button"
-                                onClick={() => this.showInfo(show)}
-                            >
-                                Mais informações
-                            </button>
-                        </Posi>
-
-                        <Box>
-                            <Inputed
-                                value={any}
-                                onChange={this.handleChangeAny}
-                                nomeCampo=""
-                            />
-                        </Box>
+                        <button
+                            type="button"
+                            onClick={() => this.showInfo(show)}
+                        >
+                            Mais informações
+                        </button>
                     </ul>
+                    <Box>
+                        <Inputed value={any} onChange={this.handleChangeAny} />
+                    </Box>
                 </Organization>
                 {admin ? <MenuAdmin /> : <Menu />}
             </Forms>
@@ -130,12 +115,9 @@ export default class Register extends Component {
     }
 }
 
-function Inputed({ value, onChange, nomeCampo }) {
+function Inputed({ value, onChange }) {
     return (
         <>
-            <Organization>
-                <h2> {nomeCampo} </h2>
-            </Organization>
             <Input value={value} onChange={onChange} />
         </>
     );
@@ -143,6 +125,5 @@ function Inputed({ value, onChange, nomeCampo }) {
 
 Inputed.propTypes = {
     value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    nomeCampo: PropTypes.string.isRequired
+    onChange: PropTypes.func.isRequired
 };

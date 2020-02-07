@@ -48,9 +48,7 @@ handleSubmit = e =>{
                            
                             <MissInputed value={pass} onChange= {this.handleChangePass} nome_campo= 'Senha' match={match} /></li>
                         <li>
-                            <MissInputed value={confirmPass} onChange= {this.handleChangePass2} nome_campo= 'Confirmação da Senha' match={match} /></li>
-                        
-                       
+                            <MissInputed value={confirmPass} onChange= {this.handleChangePass2} nome_campo= 'Confirmação da Senha' match={match} /></li> 
                     </ul>    
                     {!match ? <h2> Senhas incorretas</h2> : null}
                     <ButtonSubmit load={loading}> 

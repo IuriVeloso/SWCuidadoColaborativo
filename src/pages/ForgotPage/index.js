@@ -41,7 +41,7 @@ export default class Register extends Component {
 
                     <Inputed
                         match={match}
-                        type="text"
+                        type="email"
                         nomeCampo=""
                         value={email}
                         handleChange={this.handleChange}

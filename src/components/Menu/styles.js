@@ -3,16 +3,16 @@ import styled from 'styled-components';
 export const Organization = styled.div`
     display: flex;
     align-items: flex-end baseline;
-    justify-content : space-evenly;
-    background-color: rgb(256,256,256,0.5);
+    justify-content: space-evenly;
+    background-color: rgb(251, 251, 251, 0.7);
     min-width: 100%;
     bottom: 0;
     position: fixed;
-    color: #3B7063;
+    color: #3b7063;
     font-size: 40px;
     padding-top: 5px;
 
-    > a{
-        color: #3B7063;
+    > a {
+        color: #3b7063;
     }
-`
+`;

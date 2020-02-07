@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Recentes = styled.div`
-    background-color: rgb(225,225,0, 0.3) ;
+    background-color: rgb(225, 225, 0, 0.3);
     margin: 8px 20px;
     padding: 0 8px;
     display: flex;
@@ -12,65 +12,64 @@ export const Recentes = styled.div`
     justify-content: space-between;
     align-content: left;
     align-items: left;
- 
 
-    > h1{
+    > h1 {
         font-size: 19px;
-        font-family: "Baskerville";
-        font-weight:500;
-        margin:1px;
-        color:#444;
-    };
-    > h2{
-        font-size: 14px;
-        font-family: "Baskerville";
-        color:#414141;
-        font-weight:500;
+        font-family: 'Baskerville';
+        margin: 1px;
+        color: #444;
     }
-    > small{
+    > h2 {
+        font-size: 14px;
+        font-family: 'Baskerville';
+        color: #414141;
+        font-weight: 500;
+    }
+    > small {
         font-size: 12px;
         color: #5d5d5d;
         font-weight: bold;
         text-align: right;
-        padding-bottom:3px;
-        margin-top:-8px;
+        padding-bottom: 3px;
+        margin-top: -8px;
     }
-  
-`
+`;
 export const ButtonUser = styled.button`
     font-size: 21px;
     display: flex;
     align-content: center;
     justify-content: center;
-    font-family: "Baskerville";
+    font-family: 'Baskerville';
     border: 0;
     margin: 2% auto;
     font-weight: bold;
     padding: 2px 40px;
     border-radius: 5px;
-    background-color:  rgb(206,206,206, 0.7) ;
-    font-weight:500;
-    > a {color: #000 !important} ;
-    `
+    background-color: rgb(206, 206, 206, 0.7);
+    font-weight: 500;
+    > a {
+        color: #000 !important;
+    }
+`;
 
 export const Org1 = styled.div`
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
-    > h1{
+    > h1 {
         align-self: baseline;
         margin-top: 15px;
         margin-left: 15px;
         font-size: 22px;
-        font-family: "Baskerville";
-        font-weight:500;
+        font-family: 'Baskerville';
+        font-weight: 500;
     }
-    >a{
+    > a {
         color: #000;
     }
-`
+`;
 export const OrgSlider = styled.div`
     display: flex;
     justify-content: center;
@@ -78,22 +77,21 @@ export const OrgSlider = styled.div`
     font-size: 40px;
     color: #000;
     margin-top: 2%;
-  
-`
+`;
 
 export const ButtonEvents = styled.button`
-    font-size: 21px;
-    font-family: "Baskerville";
     display: flex;
-    align-content: center;
     justify-content: center;
-    border: 0;
-    margin: 2% auto;
-    font-weight: bold;
-    padding: 2px 40px;
-    border-radius: 5px;
-    background-color: rgb(255,255,255, 0.5);
-    font-weight:500;
-    > a {color: #000 !important} ;
-    `
-   
+    align-items: center;
+    padding: 5px 40px;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: #4b8c7c;
+    min-width: 150px;
+    min-height: 35px;
+    border-width: 0px;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Bodoni MT Std';
+    margin-bottom: 40%;
+`;
