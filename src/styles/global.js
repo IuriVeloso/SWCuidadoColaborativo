@@ -1,4 +1,4 @@
-import { createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import background from '../assets/Imagem2.jpg';
 
 export default createGlobalStyle`
@@ -34,9 +34,9 @@ export default createGlobalStyle`
     body{
         -webkit-font-smoothing: antialiased !important;
         background: url(${background});
-        background-position: center;
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-origin: border-box;
+        background-size: 100%;
         background-attachment: fixed;
     }
     input , a, form {
