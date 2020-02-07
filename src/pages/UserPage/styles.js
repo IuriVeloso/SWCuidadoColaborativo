@@ -1,33 +1,33 @@
 import styled from 'styled-components';
 
 export const Forms = styled.form`
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom:100px;
-    margin-top:20px;
-   
-    > h1{
+    padding-bottom: 100px;
+    margin-top: 20px;
+
+    > h1 {
         padding: 40px 0 40px 0;
         max-width: 160px;
         font-size: 35px;
         text-align: center;
         font-family: 'Amatic SC', sans-serif;
     }
-    ul{
+    ul {
         list-style: none;
-    li{
-        margin-top: 1px;
-        margin-bottom: 1px;
+        li {
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
     }
-    }
-`
+`;
 
-export const Input = styled.input.attrs(props=> {
-    return ({
+export const Input = styled.input.attrs(() => {
+    return {
         required: 'required'
-    });
+    };
 })`
     display: flex;
     margin: auto;
@@ -39,17 +39,16 @@ export const Input = styled.input.attrs(props=> {
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
-    border-color: #DDD;
+    border-color: #ddd;
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
-    background-color: #FFF;
-    
+    background-color: #fff;
 `;
 
-export const Select = styled.select.attrs(props=> {
-    return({
+export const Select = styled.select.attrs(() => {
+    return {
         required: 'required'
-    });
+    };
 })`
     display: flex;
     margin: auto;
@@ -60,74 +59,73 @@ export const Select = styled.select.attrs(props=> {
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
-    border-color: #DDD;
+    border-color: #ddd;
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
-    background-color: #FFF;
+    background-color: #fff;
 `;
 export const Organization = styled.div`
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-align-items: baseline;
-max-width: 400px;
-
-
-> h2{
-    font-size: 20px;
-    color: #444;
-    font-family: "Baskerville";
-}
-> a{
     display: flex;
-    color: #444;
-    font-size: 15px;
-    font-weight: bold;
-    font-family: "Baskerville";
-}
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+    max-width: 400px;
+
+    > h2 {
+        font-size: 20px;
+        color: #444;
+        font-family: 'Baskerville';
+    }
+    > a {
+        display: flex;
+        color: #444;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'Baskerville';
+    }
 `;
 
 export const Text = styled.text`
-font-size: 18px;
-color: #000;
-font-family: "Baskerville";
-margin-bottom:2px;
-margin-top:20px;
-`
+    font-size: 18px;
+    color: #000;
+    font-family: 'Baskerville';
+    margin-bottom: 2px;
+    margin-top: 20px;
+`;
 
 export const Text2 = styled.text`
-font-size: 34px;
-color: #333;
-font-family: "Baskerville";
-margin-bottom:2px;
-font-weight:500;
-margin-top:20px;
-`
+    font-size: 34px;
+    color: #333;
+    font-family: 'Baskerville';
+    margin-bottom: 2px;
+    font-weight: 500;
+    margin-top: 20px;
+`;
 export const Posi = styled.div`
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-align-items: baseline;
-max-width: 300px;
-margin-left:320px;
-> h2{
-    font-size: 20px;
-    color: #444;
-    font-family: "Baskerville";
-}
-> a{
     display: flex;
-    color: #444;
-    font-size: 13px;
-    font-weight: bold;
-    font-family: "Baskerville";
-}
-`
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+    max-width: 300px;
+    margin-left: 320px;
+    > h2 {
+        font-size: 20px;
+        color: #444;
+        font-family: 'Baskerville';
+    }
+    > a {
+        display: flex;
+        color: #444;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: 'Baskerville';
+    }
+`;
 export const Box = styled.div`
-width:400px;
-height:400px;
-margin-top:10px;
-border: 2px solid grey;
-border-radius:8px;
-background-color: rgb(256,256,256,0.5);
-`
+    width: 400px;
+    height: 400px;
+    margin-top: 10px;
+    border: 2px solid grey;
+    border-radius: 8px;
+    background-color: rgb(256, 256, 256, 0.5);
+`;
