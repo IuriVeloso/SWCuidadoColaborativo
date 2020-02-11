@@ -21,6 +21,7 @@
 /.vscode
 yarn.lock
 package.json-lock
+Fakebackv2.json
 
 npm-debug.log*
 yarn-debug.log*

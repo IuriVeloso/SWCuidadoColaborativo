@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Organization } from './styles.js';
 
-export default function HiddenMenu({ show } = this.props) {
+export default function HiddenMenu(props) {
+    const { show } = props;
     return (
         <Organization show={show}>
             <ul>
@@ -15,3 +17,7 @@ export default function HiddenMenu({ show } = this.props) {
         </Organization>
     );
 }
+
+HiddenMenu.propTypes = {
+    show: PropTypes.bool.isRequired
+};

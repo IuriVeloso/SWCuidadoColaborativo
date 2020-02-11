@@ -229,5 +229,6 @@ DropdownInput.propTypes = {
     value: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     nomeCampo: PropTypes.string.isRequired,
+    // eslint-disable-next-line react/forbid-prop-types
     list: PropTypes.object.isRequired
 };

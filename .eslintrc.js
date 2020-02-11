@@ -32,6 +32,7 @@ module.exports = {
       ],
       'import/prefer-default-export': 'off',
       'import/extensions': [0, {'js': 'never'}],
-      'no-alert': 0
+      'no-alert': 0,
+      'no-console':0
   },
 };
