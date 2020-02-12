@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import './services/reactotron';
 
+import history from './routes/history.js';
 import store from './store/index.js';
 import Routes from './routes/routes.js';
 import GlobalStyle from './styles/global.js';
@@ -13,8 +14,10 @@ function App() {
         <>
             <BrowserRouter>
                 <Provider store={store}>
-                    <Routes />
-                    <GlobalStyle />
+                    <Router history={history}>
+                        <Routes />
+                        <GlobalStyle />
+                    </Router>
                 </Provider>
             </BrowserRouter>
         </>

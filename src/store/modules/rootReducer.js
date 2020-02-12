@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
 
-import { reducer as auth } from './auth.js';
+import auth from './auth/reducer.js';
 
 export default history =>
     combineReducers({

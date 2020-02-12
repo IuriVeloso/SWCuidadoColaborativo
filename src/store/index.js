@@ -3,15 +3,15 @@ import createSagaMiddleware from 'redux-saga';
 import { routerMiddleware } from 'connected-react-router';
 
 import history from '../routes/history.js';
-import rootReducer from './ducks/index';
-import rootSaga from './saga/index';
+import rootReducer from './modules/rootReducer.js';
+import rootSaga from './modules/rootSaga.js';
 
 const sagaMonitor =
     process.env.NODE_ENV === 'development'
         ? console.tron.createSagaMonitor()
         : null;
 
-const sagaMiddleware = createSagaMiddleware(sagaMonitor);
+const sagaMiddleware = createSagaMiddleware({ sagaMonitor });
 
 const middlewares = [sagaMiddleware, routerMiddleware(history)];
 

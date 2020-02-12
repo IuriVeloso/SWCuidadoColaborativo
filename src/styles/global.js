@@ -30,14 +30,15 @@ export default createGlobalStyle`
 
     html, body, #app{
         min-height: 100%;
+        min-width: 100%;
+        display: 0 !important; 
     }
     body{
         -webkit-font-smoothing: antialiased !important;
         background: url(${background});
-        background-repeat: no-repeat;
-        background-origin: border-box;
-        background-size: 100%;
-        background-attachment: fixed;
+        background-position: 50%;
+        background-size: cover;
+        background-attachment: fixed;    
     }
     input , a, form {
         text-decoration: none !important;

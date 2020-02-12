@@ -6,7 +6,7 @@ import { FiLoader } from 'react-icons/fi';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import AuthActions from '../../store/ducks/auth.js';
+import * as AuthActions from '../../store/modules/auth/actions';
 import { Input, Form } from './styles.js';
 import { Button, ButtonSubmit, Organization } from '../../components/styles';
 
@@ -31,13 +31,13 @@ class Login extends Component {
         this.setState({ loading: true });
 
         const { email, password } = this.state;
-        const { signInRequest } = this.props;
+        const { dispatch } = this.props;
 
         if (!EmailValidator.validate(email))
             this.setState({ matchEmail: false });
         else {
             this.setState({ matchEmail: true });
-            signInRequest(email, password);
+            dispatch(AuthActions.signInRequest(email, password));
         }
         this.setState({
             email: '',
@@ -123,10 +123,10 @@ Inputed.propTypes = {
 };
 
 Login.propTypes = {
-    signInRequest: PropTypes.func.isRequired
+    dispatch: PropTypes.func.isRequired
 };
 
 const mapDispatchToProps = dispatch =>
     bindActionCreators(AuthActions, dispatch);
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(mapDispatchToProps)(Login);
