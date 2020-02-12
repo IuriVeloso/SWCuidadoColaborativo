@@ -8,6 +8,8 @@ import RedefinePage from './pages/RedefinePage/index.js';
 import AddUserPage from './pages/AddUserPage/index.js';
 import SearchUserPage from './pages/SearchUserPage/index.js';
 import UserPage from './pages/UserPage/index.js';
+import PartnersPage from './pages/PartnersPage/index.js';
+import SchoolsPage from './pages/SchoolsPage/index.js';
 
 export default function Routes() {
     return (
@@ -23,6 +25,9 @@ export default function Routes() {
                 <Route path="/adicionar-paciente" component={AddUserPage} />
                 <Route path="/procurar-paciente" component={SearchUserPage} />
                 <Route path="/paciente" component={UserPage} />
+                <Route path="/parceiros" component={PartnersPage} />
+                <Route path="/escolas-e-creches" component={SchoolsPage} />
+
             </Switch>
         </BrowserRouter>
     );
