@@ -99,3 +99,4 @@ export const Box = styled.div`
     border-radius: 8px;
     background-color: rgb(256, 256, 256, 0.5);
 `;
+

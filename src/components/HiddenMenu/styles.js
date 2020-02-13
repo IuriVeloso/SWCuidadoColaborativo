@@ -39,6 +39,9 @@ export const Organization = styled.div`
                 border: 0;
                 background: inherit;
             }
+            > a {
+                color: #fff8ff;
+            }
         }
     }
 `;

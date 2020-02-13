@@ -43,7 +43,10 @@ export default class Register extends Component {
                                 <Text>Apelido:</Text>
                             </li>
                             <li>
-                                <Text>Responsável: </Text>
+                                <Text>Território: </Text>
+                            </li>
+                            <li>
+                                <Text>Resumo do Caso: </Text>
                             </li>
                             {show && (
                                 <>
@@ -52,7 +55,7 @@ export default class Register extends Component {
                                         <Text>Relação do Responsável: </Text>
                                     </li>
                                     <li>
-                                        <Text>Território: </Text>
+                                        <Text>Responsável: </Text>
                                     </li>
                                     <li>
                                         <Text>Benefícios: </Text>
@@ -71,9 +74,6 @@ export default class Register extends Component {
                                     </li>
                                     <li>
                                         <Text>NIS:{nis}</Text>
-                                    </li>
-                                    <li>
-                                        <Text>Resumo do Caso: </Text>
                                     </li>
                                     <li>
                                         <Text>Profissional no cras: </Text>
