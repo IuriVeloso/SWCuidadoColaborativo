@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Escola = styled.div`
+export const CREAS = styled.div`
     background-color:   #C4EAA7;
     margin: 8px 10px;
     padding: 12px 10px 20px 10px;

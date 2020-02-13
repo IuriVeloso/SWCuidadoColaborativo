@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 
 import Menu from '../../components/Menu/index';
 import MenuAdmin from '../../components/Menu_admin/index';
-import { Escola, Org1, Organization} from './styles';
+import { ONG, Org1, Organization} from './styles';
 
-export default class SchoolsPage extends Component {
+export default class ONGPage extends Component {
     state = {};
 
     render() {
@@ -19,13 +19,13 @@ export default class SchoolsPage extends Component {
                 <Org1>
                    
                   
-                        <Escola>
-                            <h1>Escola Tia Dida</h1>
+                        <ONG>
+                            <h1>ONG A</h1>
                             <h2> Endereço:</h2>
                             <h2> Telefone:</h2>
                             <h2> Horário de Funcionamento:</h2>
                             <h2> Site:</h2>
-                        </Escola>
+                        </ONG>
                      
 
                       

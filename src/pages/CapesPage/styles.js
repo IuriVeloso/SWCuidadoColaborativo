@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Escola = styled.div`
+export const Capes = styled.div`
     background-color:   #C4EAA7;
     margin: 8px 10px;
     padding: 12px 10px 20px 10px;
@@ -38,7 +38,6 @@ export const Escola = styled.div`
         margin-top: -8px;
     }
 `;
-
 
 export const Org1 = styled.div`
     display: flex;
