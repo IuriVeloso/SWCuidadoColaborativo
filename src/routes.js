@@ -8,6 +8,14 @@ import RedefinePage from './pages/RedefinePage/index.js';
 import AddUserPage from './pages/AddUserPage/index.js';
 import SearchUserPage from './pages/SearchUserPage/index.js';
 import UserPage from './pages/UserPage/index.js';
+import PartnersPage from './pages/PartnersPage/index.js';
+import SchoolsPage from './pages/SchoolsPage/index.js';
+import ONGPage from './pages/ONGPage/index.js';
+import CapesPage from './pages/CapesPage/index.js';
+import CREASPage from './pages/CREASPage/index.js';
+import CFPage from './pages/CFPage/index.js';
+import CapsiPage from './pages/CapsiPage/index.js';
+
 
 export default function Routes() {
     return (
@@ -23,6 +31,14 @@ export default function Routes() {
                 <Route path="/adicionar-paciente" component={AddUserPage} />
                 <Route path="/procurar-paciente" component={SearchUserPage} />
                 <Route path="/paciente" component={UserPage} />
+                <Route path="/parceiros" component={PartnersPage} />
+                <Route path="/escolas-e-creches" component={SchoolsPage} />
+                <Route path="/ONGs" component={ONGPage} />
+                <Route path="/capes-adulto" component={CapesPage} />
+                <Route path="/CREAS/CRAS" component={CREASPage} />
+                <Route path="/CF/CMS" component={CFPage} />
+                <Route path="/CAPSI" component={CapsiPage} />
+
             </Switch>
         </BrowserRouter>
     );

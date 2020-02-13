@@ -31,6 +31,9 @@ export const Organization = styled.div`
             &:first-child {
                 border-top: 10px;
             }
+        > a {
+          color: #fff8ff;
+        }
         }
     }
 `;
