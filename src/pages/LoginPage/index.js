@@ -6,6 +6,7 @@ import { FiLoader } from 'react-icons/fi';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import { store } from '../../store/index.js';
 import * as AuthActions from '../../store/modules/auth/actions';
 import { Input, Form } from './styles.js';
 import { Button, ButtonSubmit, Organization } from '../../components/styles';
@@ -16,7 +17,6 @@ class Login extends Component {
         this.state = {
             email: '',
             password: '',
-            loading: false,
             matchEmail: true,
             matchPassword: true
         };
@@ -28,7 +28,6 @@ class Login extends Component {
 
     handleSubmit = async e => {
         e.preventDefault();
-        this.setState({ loading: true });
 
         const { email, password } = this.state;
         const { dispatch } = this.props;
@@ -41,20 +40,13 @@ class Login extends Component {
         }
         this.setState({
             email: '',
-            password: '',
-            loading: false
+            password: ''
         });
     };
 
     render() {
-        const {
-            email,
-            loading,
-            password,
-            matchEmail,
-            matchPassword
-        } = this.state;
-
+        const { email, password, matchEmail, matchPassword } = this.state;
+        const { loading } = store.getState().auth;
         return (
             <>
                 <Form onSubmit={this.handleSubmit}>

@@ -31,6 +31,14 @@ export const Organization = styled.div`
             &:first-child {
                 border-top: 10px;
             }
+            > button {
+                font-size: 100%;
+                font-family: inherit;
+                color: inherit;
+                padding: 0;
+                border: 0;
+                background: inherit;
+            }
         }
     }
 `;

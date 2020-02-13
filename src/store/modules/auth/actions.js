@@ -15,3 +15,38 @@ export function signFailed() {
         type: '@auth/SIGN_FAILED'
     };
 }
+
+export function signUpRequest(
+    fullName,
+    email,
+    pass,
+    confirmPass,
+    phone,
+    service,
+    profession,
+    $function,
+    matchPass,
+    matchEmail
+) {
+    return {
+        type: '@auth/SIGN_UP_REQUEST',
+        payload: {
+            fullName,
+            email,
+            pass,
+            confirmPass,
+            phone,
+            service,
+            profession,
+            $function,
+            matchPass,
+            matchEmail
+        }
+    };
+}
+
+export function signOut() {
+    return {
+        type: '@auth/SIGN_OUT'
+    };
+}

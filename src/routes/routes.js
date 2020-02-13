@@ -21,8 +21,8 @@ export default function Routes() {
                 <RouteManager path="/" exact component={Login} />
                 <RouteManager path="/cadastro" component={Register} />
                 <RouteManager path="/home" component={HomePage} isPrivate />
-                <RouteManager path="/users" component={Login} isPrivate />
-                <RouteManager path="/events" component={Login} isPrivate />
+                {/* <RouteManager path="/users" component={Login} isPrivate />
+                <RouteManager path="/events" component={Login} isPrivate /> */}
                 <RouteManager
                     path="/recuperacao-senha"
                     component={ForgotPage}

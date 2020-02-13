@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import store from '../store/index.js';
+import { store } from '../store/index.js';
 
 export default function RouteManager({
     component: Component,
@@ -14,16 +14,14 @@ export default function RouteManager({
 
     if (isPrivate && !isAuth) return <Redirect to="/" />;
 
-    /* if (!isPrivate && isAuth) return <Redirect to="/home" />; 
-    só liberar quando tiver logout pronto, 
-    pois essa linha impede que o usuário logado vá para a pagina de Login denovo */
+    if (!isPrivate && isAuth) return <Redirect to="/home" />;
 
     return <Route {...rest} component={Component} />;
 }
 
 RouteManager.propTypes = {
     isPrivate: PropTypes.bool,
-    component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
+    component: PropTypes.oneOfType([PropTypes.elementType, PropTypes.func])
         .isRequired
 };
 

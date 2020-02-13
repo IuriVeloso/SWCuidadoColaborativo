@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as EmailValidator from 'email-validator';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
+import * as AuthActions from '../../store/modules/auth/actions';
 import { Forms, MissInput, Select, Input } from './styles';
 import { ButtonSubmit, Organization } from '../../components/styles.js';
 
-export default class Register extends Component {
+class Register extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -43,19 +46,46 @@ export default class Register extends Component {
     handleSubmit = e => {
         e.preventDefault();
         this.setState({ loading: true });
-        const { pass, confirmPass, error, email } = this.state;
+        const {
+            fullName,
+            pass,
+            confirmPass,
+            phone,
+            service,
+            profession,
+            $function,
+            error,
+            email
+        } = this.state;
+        const { dispatch } = this.props;
         if (pass !== confirmPass)
             this.setState({
                 error: [...error, 'Senhas Diferentes'],
                 matchPass: false
             });
-        else this.setState({ matchPass: true });
+        else this.setState({ matchPass: true, error: [...error] });
+
         if (!EmailValidator.validate(email))
             this.setState({
                 error: [...error, 'Email inválido'],
                 matchEmail: false
             });
-        else this.setState({ matchEmail: true });
+        else this.setState({ matchEmail: true, error: [...error] });
+
+        if (pass === confirmPass && EmailValidator.validate(email)) {
+            dispatch(
+                AuthActions.signUpRequest(
+                    fullName,
+                    email,
+                    pass,
+                    confirmPass,
+                    phone,
+                    service,
+                    profession,
+                    $function
+                )
+            );
+        }
 
         this.setState({
             loading: false
@@ -230,5 +260,14 @@ DropdownInput.propTypes = {
     onChange: PropTypes.func.isRequired,
     nomeCampo: PropTypes.string.isRequired,
     // eslint-disable-next-line react/forbid-prop-types
-    list: PropTypes.object.isRequired
+    list: PropTypes.array.isRequired
 };
+
+Register.propTypes = {
+    dispatch: PropTypes.func.isRequired
+};
+
+const mapDispatchToProps = dispatch =>
+    bindActionCreators(AuthActions, dispatch);
+
+export default connect(mapDispatchToProps)(Register);
