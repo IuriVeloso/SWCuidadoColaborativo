@@ -16,7 +16,6 @@ import CREASPage from './pages/CREASPage/index.js';
 import CFPage from './pages/CFPage/index.js';
 import CapsiPage from './pages/CapsiPage/index.js';
 
-
 export default function Routes() {
     return (
         <BrowserRouter>
@@ -38,7 +37,6 @@ export default function Routes() {
                 <Route path="/CREAS/CRAS" component={CREASPage} />
                 <Route path="/CF/CMS" component={CFPage} />
                 <Route path="/CAPSI" component={CapsiPage} />
-
             </Switch>
         </BrowserRouter>
     );
