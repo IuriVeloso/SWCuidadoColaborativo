@@ -6,7 +6,7 @@ import Menu from '../../components/Menu/index';
 import MenuAdmin from '../../components/Menu_admin/index';
 import { Parceiro, Org1, Organization, Coluna1, Coluna2} from './styles';
 
-export default class PartnersPage extends Component {
+export default class Partners extends Component {
     state = {};
 
     render() {
@@ -17,7 +17,7 @@ export default class PartnersPage extends Component {
                         <h1>Cuidado Colaborativo</h1>
                     </Organization>
                 <Org1>
-                   
+
                     <Coluna1>
                       <Link to="/CAPSI">
                         <Parceiro>
@@ -54,11 +54,6 @@ export default class PartnersPage extends Component {
                         </Parceiro>
                     </Link>
                     </Coluna2>
-
-                  
-                   
-                  
-                 
                     {admin ? <MenuAdmin /> : <Menu />}
                 </Org1>
             </>

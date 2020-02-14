@@ -13,6 +13,7 @@ import RedefinePage from '../pages/RedefinePage/index.js';
 import AddUserPage from '../pages/AddUserPage/index.js';
 import SearchUserPage from '../pages/SearchUserPage/index.js';
 import UserPage from '../pages/UserPage/index.js';
+import Partners from '../pages/PartnersPage/index.js';
 
 export default function Routes() {
     return (
@@ -43,7 +44,8 @@ export default function Routes() {
                     component={SearchUserPage}
                     isPrivate
                 />
-                <RouteManager path="/paciente" component={UserPage} />
+                <RouteManager path="/paciente" component={UserPage} isPrivate />
+                <RouteManager path="/parceiros" component={Partners} isPrivate/>}
             </Switch>
         </ConnectedRouter>
     );

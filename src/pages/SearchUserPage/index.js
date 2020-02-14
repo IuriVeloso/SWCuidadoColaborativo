@@ -26,20 +26,20 @@ handleChangePacient= e =>
     render(){
         const { search, pacient, loading} = this.state;
         const admin = true;
-        const list_pacient=["Nome", "Data de nascimento", "Apelido"]
+        const list_pacient=["Nome", "Data de nascimento", "Apelido", "Território", "Nome da Mãe"]
         return(
                 <Forms onSubmit={this.handleSubmit} >
                     <Organization> <h1>Cuidado Colaborativo</h1> </Organization>
                 
                     <ul>
                         <li>
-                            <Inputed value={pacient} onChange= {this.handleChangePacient} nome_campo= 'Procurar Pacientes'/></li>
+                            <Inputed value={pacient} onChange= {this.handleChangePacient} nome_campo= 'Procurar Usuários'/></li>
                         <li>
                              <DropdownInput value={search} onChange= {this.handleChangeSearch} nome_campo= 'Procurar por' list={list_pacient}/></li>
                       
                     </ul>
                     <ButtonSubmit load={loading}> Pesquisar </ButtonSubmit>
-                   <Link to="adicionar-paciente">  <ButtonSubmit2 load={loading}> Adicionar Paciente </ButtonSubmit2></Link>
+                   <Link to="adicionar-paciente">  <ButtonSubmit2 load={loading}> Adicionar Usuários </ButtonSubmit2></Link>
                    {admin ? <MenuAdmin/>:<Menu/>}    
                 </Forms>
 
