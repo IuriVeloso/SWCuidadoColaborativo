@@ -22,18 +22,18 @@ export default class Homepage extends Component {
                         <Recentes>
                             <h1> Marcus Vinicius</h1>
                             <h2> Dona Marta</h2>
-                            <small> Última atualização: 11 horas atrás </small>
+                            <small> 11 horas atrás </small>
                         </Recentes>
                     </Link>
                     <Recentes>
                         <h1> João Marcelo</h1>
                         <h2> Dona Marta</h2>
-                        <small> Última atualização: 1 dia atrás </small>
+                        <small> 1 dia atrás </small>
                     </Recentes>
                     <Recentes>
                         <h1> Vitor (Joca)</h1>
                         <h2> Pavão</h2>
-                        <small> Última atualização: 2 dias atrás </small>
+                        <small> 2 dias atrás </small>
                     </Recentes>
                     <Link to="/procurar-paciente">
                         <Button>Usuários </Button>

@@ -12,7 +12,6 @@ export const Recentes = styled.div`
     justify-content: space-between;
     align-content: left;
     align-items: left;
-
     > h1 {
         font-size: 19px;
         font-family: 'Baskerville';
@@ -31,7 +30,7 @@ export const Recentes = styled.div`
         font-weight: bold;
         text-align: right;
         padding-bottom: 3px;
-        margin-top: -8px;
+        margin-top: -15px;
     }
 `;
 export const ButtonUser = styled.button`
@@ -59,12 +58,13 @@ export const Org1 = styled.div`
     justify-content: center;
     margin: auto;
     > h1 {
-        align-self: baseline;
+        align-self: center;
         margin-top: 15px;
         margin-left: 15px;
         font-size: 22px;
         font-family: 'Baskerville';
         font-weight: 500;
+        
     }
     > a {
         color: #000;
