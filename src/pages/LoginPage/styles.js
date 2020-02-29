@@ -6,27 +6,27 @@ export const Form = styled.form`
     align-items: center;
     flex-direction: column;
 
-    h3{
-       color: #3B7063;
+    h3 {
+        color: #3b7063;
         padding: 30px 0 3px 0;
-        font-family: "Baskerville" ;
+        font-family: 'Baskerville';
     }
 
-    >h2{
+    > h2 {
         color: #000;
         padding: 0 3px 0;
         font-size: 20px;
-        font-family: "Baskerville" ;
+        font-family: 'Baskerville';
     }
 
-    h1{
+    h1 {
         padding: 40px 0 60px 0;
         max-width: 160px;
         font-size: 35px;
         text-align: center;
         font-family: 'Amatic SC', sans-serif;
     }
-`
+`;
 
 export const Input = styled.input`
     display: flex;
@@ -39,8 +39,8 @@ export const Input = styled.input`
     font-size: 16px;
     border-width: 1px;
     border-style: outset;
-    border-color: ${props=> (props.match ? '#DDD' : '#C13')};
+    border-color: ${props => (props.match ? '#DDD' : '#C13')};
     border-radius: 6px;
     box-shadow: 1px 1px 1px grey;
-    background-color: #FFF;
+    background-color: #fff;
 `;
