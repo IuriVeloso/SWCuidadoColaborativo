@@ -6,6 +6,7 @@ export const Organization = styled.div`
     justify-content: space-evenly;
     background-color: rgb(251, 251, 251, 0.7);
     min-width: 100%;
+    height: 9%;
     bottom: 0;
     position: fixed;
     color: #3b7063;

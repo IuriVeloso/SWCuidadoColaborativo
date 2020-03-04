@@ -5,32 +5,42 @@ import HiddenMenu from '../HiddenMenu/index.js';
 import { Organization } from './styles';
 
 export default class Menu extends Component {
-    state = {
-        show: false
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            showMenu: false,
+            showNotifications: false
+        };
+    }
 
-    handleMenuAppear = e => {
-        this.setState({ show: !e.show });
-    };
+    handleMenuAppear = e => this.setState({ showMenu: !e.showMenu });
+
+    handleNotificationsAppear = e =>
+        this.setState({ showNotifications: !e.showNotifications });
 
     render() {
-        const { show } = this.state;
+        const { showMenu, showNotifications } = this.state;
         return (
             <>
                 <Organization>
                     <HiddenMenu />
                     <Link to="/adicionar-paciente">
-                        {' '}
-                        <FaUserPlus />{' '}
+                        <FaUserPlus />
                     </Link>
                     <Link to="/procurar-paciente">
-                        {' '}
-                        <FaSearch />{' '}
+                        <FaSearch />
                     </Link>
-                    <FaBell />
+                    <FaBell
+                        cursor="pointer"
+                        onClick={() =>
+                            this.handleNotificationsAppear({
+                                showNotifications
+                            })
+                        }
+                    />
                     <FaBars
                         cursor="pointer"
-                        onClick={() => this.handleMenuAppear({ show })}
+                        onClick={() => this.handleMenuAppear({ showMenu })}
                     />
                 </Organization>
             </>

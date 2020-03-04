@@ -10,24 +10,28 @@ import {
 
 import { Organization } from '../Menu/styles.js';
 import HiddenMenu from '../HiddenMenu/index.js';
+import Notification from '../Notifications/index.js';
 
 export default class MenuAdmin extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: false
+            showMenu: false,
+            showNotifications: false
         };
     }
 
-    handleMenuAppear = e => {
-        this.setState({ show: !e.show });
-    };
+    handleMenuAppear = e => this.setState({ showMenu: !e.showMenu });
+
+    handleNotificationsAppear = e =>
+        this.setState({ showNotifications: !e.showNotifications });
 
     render() {
-        const { show } = this.state;
+        const { showMenu, showNotifications } = this.state;
         return (
             <>
-                <HiddenMenu show={show} />
+                <HiddenMenu show={showMenu} />
+                <Notification show={showNotifications} />
                 <Organization>
                     <Link to="/adicionar-membro">
                         <FaAddressCard />
@@ -38,10 +42,17 @@ export default class MenuAdmin extends Component {
                     <Link to="/procurar-usuário">
                         <FaSearch />
                     </Link>
-                    <FaBell />
+                    <FaBell
+                        cursor="pointer"
+                        onClick={() =>
+                            this.handleNotificationsAppear({
+                                showNotifications
+                            })
+                        }
+                    />
                     <FaBars
                         cursor="pointer"
-                        onClick={() => this.handleMenuAppear({ show })}
+                        onClick={() => this.handleMenuAppear({ showMenu })}
                     />
                 </Organization>
             </>
