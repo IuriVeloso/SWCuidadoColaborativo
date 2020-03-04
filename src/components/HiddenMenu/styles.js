@@ -4,8 +4,8 @@ export const Organization = styled.div`
     background-color: rgb(0, 0, 0, 0.62);
     position: fixed;
     width: 100%;
-    height: 100%;
-    bottom: 55px;
+    height: 91%;
+    top: 0px;
     display: ${props => (props.show ? 'flex' : 'none')};
     justify-content: center;
     align-items: center;
@@ -38,6 +38,9 @@ export const Organization = styled.div`
                 padding: 0;
                 border: 0;
                 background: inherit;
+            }
+            > a {
+                color: #fff8ff;
             }
         }
     }

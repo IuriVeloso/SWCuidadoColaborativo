@@ -1,19 +1,21 @@
 import styled from 'styled-components';
 
-export const Recentes = styled.div`
-    background-color: rgb(225, 225, 0, 0.3);
-    margin: 8px 20px;
-    padding: 0 8px;
+export const Parceiro = styled.div`
+    background-color:    #C4EAA7;
+    margin: 8px 10px;
+    padding: 12px 10px 12px 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 300px;
-    border-radius: 8px;
+    width: 140px;
+    border-radius: 18px;
     justify-content: space-between;
     align-content: left;
     align-items: left;
+    text-align: center;
+
     > h1 {
-        font-size: 19px;
+        font-size: 17px;
         font-family: 'Baskerville';
         margin: 1px;
         color: #444;
@@ -30,7 +32,7 @@ export const Recentes = styled.div`
         font-weight: bold;
         text-align: right;
         padding-bottom: 3px;
-        margin-top: -15px;
+        margin-top: -8px;
     }
 `;
 export const ButtonUser = styled.button`
@@ -53,12 +55,13 @@ export const ButtonUser = styled.button`
 
 export const Org1 = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: auto;
+
+   
     > h1 {
-        align-self: center;
+        align-self: baseline;
         margin-top: 15px;
         margin-left: 15px;
         font-size: 22px;
@@ -69,27 +72,43 @@ export const Org1 = styled.div`
         color: #000;
     }
 `;
-export const OrgSlider = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    color: #000;
-    margin-top: 2%;
-`;
 
-export const ButtonEvents = styled.button`
+
+
+export const Organization = styled.div`
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+
+
+> a{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 40px;
-    border-radius: 10px;
-    background-color: #4b8c7c;
-    min-width: 150px;
-    min-height: 35px;
-    border-width: 0px;
-    font-size: 20px;
-    color: #fff;
-    font-family: 'Bodoni MT Std';
-    margin-bottom: 40%;
-`;
+    color: #444;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Baskerville";
+}
+>h1{
+    display: flex;
+    align-items: flex-end;
+    justify-content : space-evenly;
+    padding: 40px 0 150px 0;
+    max-width: 160px;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+    margin-bottom:-100px;
+
+}
+`
+export const Coluna1 = styled.div`
+display:flex;
+flex-direction: column;
+`
+
+export const Coluna2 = styled.div`
+display:flex;
+flex-direction: column;
+`

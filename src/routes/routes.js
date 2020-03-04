@@ -13,6 +13,14 @@ import RedefinePage from '../pages/RedefinePage/index.js';
 import AddUserPage from '../pages/AddUserPage/index.js';
 import SearchUserPage from '../pages/SearchUserPage/index.js';
 import UserPage from '../pages/UserPage/index.js';
+import Partners from '../pages/PartnersPage/index.js';
+import Schools from '../pages/SchoolsPage/index.js';
+import ONG from '../pages/ONGPage/index.js';
+import Capes from '../pages/CapesPage/index.js';
+import CREAS from '../pages/CREASPage/index.js';
+import CF from '../pages/CFPage/index.js';
+import Capsi from '../pages/CapsiPage/index.js';
+import newUsers from '../pages/NewUsersPage/index.js';
 
 export default function Routes() {
     return (
@@ -34,16 +42,40 @@ export default function Routes() {
                     isPrivate
                 />
                 <RouteManager
-                    path="/adicionar-paciente"
+                    path="/adicionar-usuário"
                     component={AddUserPage}
                     isPrivate
                 />
                 <RouteManager
-                    path="/procurar-paciente"
+                    path="/procurar-usuário"
                     component={SearchUserPage}
                     isPrivate
                 />
-                <RouteManager path="/paciente" component={UserPage} />
+                <RouteManager path="/usuário" component={UserPage} isPrivate />
+                <RouteManager
+                    path="/parceiros"
+                    component={Partners}
+                    isPrivate
+                />
+                <RouteManager
+                    path="/escolas-e-creches"
+                    component={Schools}
+                    isPrivate
+                />
+                <RouteManager path="/ONGs" component={ONG} isPrivate />
+                <RouteManager
+                    path="/capes-adulto"
+                    component={Capes}
+                    isPrivate
+                />
+                <RouteManager path="/CREAS/CRAS" component={CREAS} isPrivate />
+                <RouteManager path="/CF/CMS" component={CF} isPrivate />
+                <RouteManager path="/CAPSI" component={Capsi} isPrivate />
+                <RouteManager
+                    path="/adicionar-membro"
+                    component={newUsers}
+                    isPrivate
+                />
             </Switch>
         </ConnectedRouter>
     );
