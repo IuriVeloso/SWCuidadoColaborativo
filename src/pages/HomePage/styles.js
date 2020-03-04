@@ -64,7 +64,6 @@ export const Org1 = styled.div`
         font-size: 22px;
         font-family: 'Baskerville';
         font-weight: 500;
-        
     }
     > a {
         color: #000;
@@ -85,7 +84,6 @@ export const ButtonEvents = styled.button`
     align-items: center;
     padding: 5px 40px;
     border-radius: 10px;
-    border-style: solid;
     background-color: #4b8c7c;
     min-width: 150px;
     min-height: 35px;
