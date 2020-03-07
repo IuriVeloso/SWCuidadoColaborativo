@@ -31,8 +31,7 @@ export default class Register extends Component {
 
     handleChangeBirth = e => this.setState({ birth: e.target.value });
 
-    handleChangeResponsible = e =>
-        this.setState({ responsible: e.target.value });
+    handleChangeResponsible = e => this.setState({ responsible: e.target.value });
 
     handleChangeAdress = e => this.setState({ adress: e.target.value });
 

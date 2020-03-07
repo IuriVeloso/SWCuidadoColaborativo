@@ -40,10 +40,10 @@ export default class Register extends Component {
                                 <Text>Nome: {pacient}</Text>
                             </li>
                             <li>
-                                <Text>Apelido:</Text>
+                                <Text>Apelido: aaaaa</Text>
                             </li>
                             <li>
-                                <Text>Território: </Text>
+                                <Text>Território: aaaa </Text>
                             </li>
                             <li>
                                 <Text>Resumo do Caso: </Text>
@@ -106,7 +106,7 @@ export default class Register extends Component {
                         </button>
                     </ul>
                     <Box>
-                        <Inputed value={any} onChange={this.handleChangeAny} />
+                      
                     </Box>
                 </Organization>
                 {admin ? <MenuAdmin /> : <Menu />}
