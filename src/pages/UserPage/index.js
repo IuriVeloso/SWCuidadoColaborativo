@@ -40,10 +40,10 @@ export default class Register extends Component {
                                 <Text>Nome: {pacient}</Text>
                             </li>
                             <li>
-                                <Text>Apelido: aaaaa</Text>
+                                <Text>Apelido: </Text>
                             </li>
                             <li>
-                                <Text>Território: aaaa </Text>
+                                <Text>Território: </Text>
                             </li>
                             <li>
                                 <Text>Resumo do Caso: </Text>
