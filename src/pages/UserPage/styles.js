@@ -56,11 +56,15 @@ export const Organization = styled.div`
         align-items: center;
     }
     > ul button {
-        background: none;
-        border: none;
+        background-color: rgb(256, 256, 256, 0.3);
+        color:#666;
+        border-radius:4px;
+        border: 1px solid rgb(256, 256, 256, 0.1);
         justify-self: flex-end;
         align-self: flex-end;
         margin-left: 0px;
+        font-size:11px;
+        padding: 2px 2px;
     }
 `;
 

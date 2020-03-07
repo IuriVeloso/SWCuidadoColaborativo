@@ -107,7 +107,7 @@ export const ButtonSubmit2= styled.button.attrs(props => {
         disabled: props.load,
     });
 })`
-    width:250px;
+    max-width:260px;
     margin: 4% 0;
     min-height: 35px;
     padding: 5px 45px;
