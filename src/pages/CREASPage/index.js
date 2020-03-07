@@ -7,9 +7,16 @@ import MenuAdmin from '../../components/Menu_admin/index';
 import { CREAS, Org1, Organization} from './styles';
 
 export default class CREASPage extends Component {
-    state = {};
+    constructor(props) {
+        super(props);
+        this.state = {
+           nome:''
+        };
+    }
+    handleChangeNome = e => this.setState({ nome: e.target.value });
 
     render() {
+        const {nome}=this.state;
         const admin = true;
         return ( 
             <>  
@@ -20,11 +27,14 @@ export default class CREASPage extends Component {
                    
                   
                         <CREAS>
-                            <h1>Título</h1>
-                            <h2> Endereço:</h2>
+                            <h1>{nome}</h1>
+                            <h2> Tipo de local:</h2>
                             <h2> Telefone:</h2>
-                            <h2> Horário de Funcionamento:</h2>
+                            <h2> Horário de funcionamento:</h2>
+                            <h2> Dias de funcionamento:</h2>
                             <h2> Site:</h2>
+                            <h2> Lista de espera:</h2>
+                            <h2> Endereço:</h2>
                         </CREAS>
                      
 
