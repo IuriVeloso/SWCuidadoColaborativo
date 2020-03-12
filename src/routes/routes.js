@@ -34,12 +34,12 @@ export default function Routes() {
                 <RouteManager
                     path="/recuperacao-senha"
                     component={ForgotPage}
-                    isPrivate
+                   
                 />
                 <RouteManager
                     path="/redefinir-senha"
                     component={RedefinePage}
-                    isPrivate
+                
                 />
                 <RouteManager
                     path="/adicionar-usuário"
